@@ -7,17 +7,17 @@ export default function ContentSection() {
                         <div className="relative overflow-hidden rounded-3xl bg-gray-900 shadow-2xl lg:max-w-lg min-h-80 lg:h-full">
                             <img
                                 className="absolute inset-0 h-full w-full object-cover brightness-125"
-                                src="images/rick-mason-2FaCKyEEtis-unsplash.jpg"
-                                alt="legos in assorted colors"
+                                src="images/hadassah-carlson-GkGKXyQANW8-unsplash.jpg"
+                                alt="abandoned house on a beach"
                             />
-                            <div className="absolute inset-0 bg-gray-500 mix-blend-multiply" />
-                            <p className="absolute bottom-0 inset-x-0 text-xs text-gray-200 px-4 pb-4">
+                            {/* <div className="absolute inset-0 bg-gray-500 mix-blend-multiply" /> */}
+                            <p className="absolute bottom-0 inset-x-0 text-xs text-gray-800 px-4 pb-4">
                                 Photo by{' '}
-                                <a href="https://unsplash.com/@egnaro?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-                                    Rick Mason
+                                <a href="https://unsplash.com/@hadassah_carlson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+                                    Hadassah Carlson
                                 </a>{' '}
                                 on{' '}
-                                <a href="https://unsplash.com/photos/assorted-color-plastic-toy-lot-2FaCKyEEtis?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+                                <a href="https://unsplash.com/photos/white-and-gray-concrete-house-under-white-clouds-during-daytime-GkGKXyQANW8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
                                     Unsplash
                                 </a>
                             </p>

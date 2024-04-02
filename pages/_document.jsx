@@ -5,8 +5,8 @@ export default function Document() {
     const meta = {
         title: 'Jake Kaminski • Website Marketing',
         description:
-            "I'm a web designer & developer from Central Illinois that helps businesses make their websites cost less and do more.",
-        image: 'https://assets.vercel.com/image/upload/q_auto/front/vercel/dps.png',
+            "I'm a web designer & developer from Central Illinois. I specialize in making websites that are beautiful, painless, and cost-effective.",
+        image: 'public/images/headshot.jpg',
     }
 
     return (
