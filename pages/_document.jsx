@@ -1,4 +1,5 @@
 import { Head, Html, Main, NextScript } from 'next/document'
+import { bodyFont, headingFont } from './_app'
 
 export default function Document() {
     const meta = {
@@ -9,7 +10,10 @@ export default function Document() {
     }
 
     return (
-        <Html lang="en" class="scroll-smooth">
+        <Html
+            lang="en"
+            class={`${bodyFont.variable} ${headingFont.variable} scroll-smooth font-body`}
+        >
             <Head>
                 <meta name="robots" content="follow, index" />
                 <meta name="description" content={meta.description} />

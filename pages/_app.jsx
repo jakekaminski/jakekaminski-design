@@ -1,28 +1,26 @@
-import Head from 'next/head'
+import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import 'nextra-theme-blog/style.css'
 import React from 'react'
+
+export const headingFont = localFont({
+    src: '../public/fonts/greenpark-bold-webfont.woff2',
+    variable: '--font-heading',
+})
+
+export const bodyFont = Inter({
+    subsets: ['latin'],
+    variable: '--font-body',
+})
 
 import '../styles/main.css'
 
 export default function Nextra({ Component, pageProps }) {
     return (
-        <>
-            <Head>
-                <link
-                    rel="alternate"
-                    type="application/rss+xml"
-                    title="RSS"
-                    href="/feed.xml"
-                />
-                <link
-                    rel="preload"
-                    href="/fonts/Inter-roman.latin.var.woff2"
-                    as="font"
-                    type="font/woff2"
-                    crossOrigin="anonymous"
-                />
-            </Head>
+        <main
+            className={`${headingFont.variable} ${bodyFont.variable} font-body`}
+        >
             <Component {...pageProps} />
-        </>
+        </main>
     )
 }

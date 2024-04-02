@@ -1,15 +1,19 @@
-import ContactForm from "../components/ContactForm"
-import ContentSection from "../components/ContentSection"
-import FeaturesSection from "../components/FeaturesSection"
-import HomeHero from "../components/HomeHero"
+import ContactForm from '../components/ContactForm'
+import ContentSection from '../components/ContentSection'
+import FeaturesSection from '../components/FeaturesSection'
+import HomeHero from '../components/HomeHero'
+import { Header } from '../components/layout'
 
 export default function IndexPage() {
     return (
-        <div>
-            <HomeHero />
-            <ContentSection />
-            <FeaturesSection />
-            <ContactForm />
-        </div>
+        <>
+            <Header />
+            <main>
+                <HomeHero />
+                <ContentSection />
+                <FeaturesSection />
+                <ContactForm />
+            </main>
+        </>
     )
 }
