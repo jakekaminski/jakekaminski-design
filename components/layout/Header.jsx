@@ -12,7 +12,7 @@ export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="z-50 relative">
+        <header className="z-20 relative">
             <nav
                 className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
                 aria-label="Global"
@@ -35,7 +35,7 @@ export const Header = () => {
                         </a>
                     ))}
                 </div>
-                <div className="flex flex-1 items-center justify-end gap-x-6">
+                <div className="hidden flex-1 items-center justify-end gap-x-6  lg:flex">
                     <a
                         href="#contact"
                         className="rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
@@ -60,8 +60,7 @@ export const Header = () => {
                 open={mobileMenuOpen}
                 onClose={setMobileMenuOpen}
             >
-                <div className="fixed inset-0 z-10" />
-                <Dialog.Panel className="font-body fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <Dialog.Panel className="font-body fixed inset-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center gap-x-6">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="font-heading text-xl font-semibold text-emerald-600">
@@ -90,7 +89,7 @@ export const Header = () => {
                                     <a
                                         key={item.name}
                                         href={item.href}
-                                        className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                        className="font-heading -mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-green-200"
                                     >
                                         {item.name}
                                     </a>
@@ -99,9 +98,9 @@ export const Header = () => {
                             <div className="py-6">
                                 <a
                                     href="#contact"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-green-200"
                                 >
-                                    Work with Jake
+                                    Work with Jake →
                                 </a>
                             </div>
                         </div>
