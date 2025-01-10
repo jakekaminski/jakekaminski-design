@@ -25,10 +25,10 @@ export default function ContentSection() {
                     </div>
                     <div>
                         <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
-                            <p className="text-base font-semibold leading-7 text-yellow-600">
+                            <p className="text-base font-semibold leading-7 text-emerald-600">
                                 About
                             </p>
-                            <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            <h1 className="font-heading mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                                 Let's face it. Your website isn't what you
                                 dreamed it would be.
                             </h1>
@@ -69,7 +69,7 @@ export default function ContentSection() {
                         <div className="mt-10 flex">
                             <a
                                 href="#contact"
-                                className="text-base font-semibold leading-7 text-yellow-600 hover:text-yellow-700 hover:underline hover:underline-offset-2"
+                                className="text-base font-semibold leading-7 text-emerald-600 hover:text-emerald-700 hover:underline hover:underline-offset-2"
                             >
                                 Reach out today to get started{' '}
                                 <span aria-hidden="true">&rarr;</span>

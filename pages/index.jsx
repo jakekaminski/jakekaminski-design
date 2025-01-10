@@ -14,12 +14,12 @@ export default function IndexPage() {
                 </title>
             </Head>
             <Header />
-            <main>
+            <>
                 <HomeHero />
                 <ContentSection />
                 <FeaturesSection />
                 <ContactForm />
-            </main>
+            </>
         </>
     )
 }

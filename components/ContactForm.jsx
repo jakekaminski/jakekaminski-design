@@ -8,8 +8,8 @@ export default function ContactForm() {
     return (
         <section id="contact" className="relative isolate bg-white">
             <div className="mx-auto grid max-w-7xl grid-cols-1">
-                <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
-                    <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+                <div className="grid grid-cols-1 gap-6 relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48 lg:grid-cols-2 lg:gap-10">
+                    <div className="flex flex-col justify-center mx-auto max-w-xl lg:mx-0 lg:max-w-lg ">
                         <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10">
                             <svg
                                 className="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -54,7 +54,7 @@ export default function ContactForm() {
                                 />
                             </svg>
                         </div>
-                        <h2 className="text-3xl font-bold tracking-tight text-gray-900">
+                        <h2 className="font-heading text-3xl font-bold tracking-tight text-gray-900">
                             Get in touch
                         </h2>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
@@ -110,7 +110,19 @@ export default function ContactForm() {
                             </div>
                         </dl>
                     </div>
+                    <div className="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
+                        <div className="shadow-lg md:rounded-3xl">
+                            <div className="bg-green-500 rounded-lg overflow-hidden [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
+                                <img
+                                    src="images/headshot-2024.jpg"
+                                    alt="Jake Kaminski"
+                                    className="w-full h-[32rem] object-cover"
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
                 {/* <form
                     action="#"
                     method="POST"
@@ -131,7 +143,7 @@ export default function ContactForm() {
                                         name="first-name"
                                         id="first-name"
                                         autoComplete="given-name"
-                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
@@ -148,7 +160,7 @@ export default function ContactForm() {
                                         name="last-name"
                                         id="last-name"
                                         autoComplete="family-name"
-                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
@@ -165,7 +177,7 @@ export default function ContactForm() {
                                         name="email"
                                         id="email"
                                         autoComplete="email"
-                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
@@ -182,7 +194,7 @@ export default function ContactForm() {
                                         name="phone-number"
                                         id="phone-number"
                                         autoComplete="tel"
-                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                                     />
                                 </div>
                             </div>
@@ -198,7 +210,7 @@ export default function ContactForm() {
                                         name="message"
                                         id="message"
                                         rows={4}
-                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-yellow-600 sm:text-sm sm:leading-6"
+                                        className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-emerald-600 sm:text-sm sm:leading-6"
                                         defaultValue={''}
                                     />
                                 </div>
@@ -207,7 +219,7 @@ export default function ContactForm() {
                         <div className="mt-8 flex justify-end">
                             <button
                                 type="submit"
-                                className="rounded-md bg-yellow-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-yellow-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-yellow-600"
+                                className="rounded-md bg-emerald-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
                             >
                                 Send message
                             </button>
