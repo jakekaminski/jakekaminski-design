@@ -1,0 +1,6 @@
+@import 'tailwindcss';
+
+@theme {
+    --font-body: 'Karla, sans-serif';
+    --font-heading: '"Young Serif", serif';
+}

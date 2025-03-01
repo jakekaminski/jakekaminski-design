@@ -1,10 +1,10 @@
 export default function HomeHero() {
     return (
-        <section id="about" className="bg-white">
+        <section id="hero" className="bg-white">
             <div className="relative isolate pt-14">
                 <div
                     aria-hidden="true"
-                    className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                    className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-x-hidden blur-3xl sm:-top-80"
                 >
                     <div
                         style={{
@@ -17,11 +17,11 @@ export default function HomeHero() {
                 <div className="py-24 sm:py-32 lg:pb-40">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <div className="mx-auto max-w-2xl text-center">
-                            <h1 className="font-heading text-balance text-5xl font-normal tracking-tight text-gray-900 sm:text-7xl">
+                            <h1 className="font-heading text-5xl font-normal tracking-tight text-balance text-gray-900 sm:text-7xl">
                                 I make web experiences that cost less and do
                                 more.
                             </h1>
-                            <p className="mt-8 text-pretty text-lg font-medium text-gray-500 sm:text-xl/8">
+                            <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
                                 I'm Jake, a web designer & developer from
                                 Central Illinois. I specialize in making
                                 websites that are beautiful, painless, and
@@ -30,7 +30,7 @@ export default function HomeHero() {
                             <div className="mt-10 flex items-center justify-center gap-x-6">
                                 <a
                                     href="#"
-                                    className="rounded-md bg-emerald-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
+                                    className="rounded-md bg-emerald-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
                                 >
                                     Get started
                                 </a>

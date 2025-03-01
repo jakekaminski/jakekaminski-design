@@ -5,7 +5,7 @@ import FeaturesSection from '../components/FeaturesSection'
 import HomeHero from '../components/HomeHero'
 import { Header } from '../components/layout'
 
-export default function IndexPage() {
+export default function HomePage() {
     return (
         <>
             <Head>
