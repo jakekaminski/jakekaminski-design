@@ -1,3 +1,4 @@
+import ProjectsSection from '@/components/ProjectsSection'
 import Head from 'next/head'
 import ContactForm from '../components/ContactForm'
 import ContentSection from '../components/ContentSection'
@@ -13,9 +14,9 @@ export default function HomePage() {
                     Jake Kaminski • Website Marketing in Central Illinois
                 </title>
             </Head>
-            <Header />
             <>
                 <HomeHero />
+                <ProjectsSection />
                 <ContentSection />
                 <FeaturesSection />
                 <ContactForm />

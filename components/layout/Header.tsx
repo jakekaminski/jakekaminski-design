@@ -1,26 +1,31 @@
 'use client'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { getPageMap } from 'nextra/page-map'
 import { useState } from 'react'
 
 const navigation = [
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'About', href: '/#about' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Contact', href: '/#contact' },
 ]
 
-export const Header = () => {
+export type HeaderProps = {
+    pageMap: Awaited<ReturnType<typeof getPageMap>>
+}
+
+export const Header = ({ pageMap }: HeaderProps) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="z-20 relative">
+        <header className="relative z-20">
             <nav
                 className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8"
                 aria-label="Global"
             >
                 <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
-                        <span className="font-heading text-2xl font-semibold text-emerald-600">
+                    <a href="/#" className="-m-1.5 p-1.5">
+                        <span className="font-heading text-2xl font-normal text-emerald-600">
                             Jake Kaminski
                         </span>
                     </a>
@@ -30,15 +35,15 @@ export const Header = () => {
                         <a
                             key={item.name}
                             href={item.href}
-                            className="font-body text-sm font-semibold leading-6 text-gray-900 px-4 py-2 rounded-md transition-colors hover:bg-green-200 active:bg-green-300"
+                            className="font-body rounded-md px-4 py-2 text-sm leading-6 font-semibold text-gray-900 transition-colors hover:bg-green-200 active:bg-green-300"
                         >
                             {item.name}
                         </a>
                     ))}
                 </div>
-                <div className="hidden flex-1 items-center justify-end gap-x-6  lg:flex">
+                <div className="hidden flex-1 items-center justify-end gap-x-6 lg:flex">
                     <a
-                        href="#contact"
+                        href="/#contact"
                         className="rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
                     >
                         Work with Jake
@@ -61,7 +66,7 @@ export const Header = () => {
                 open={mobileMenuOpen}
                 onClose={setMobileMenuOpen}
             >
-                <Dialog.Panel className="font-body fixed inset-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10">
+                <Dialog.Panel className="font-body fixed inset-0 z-40 w-full overflow-y-auto bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center gap-x-6">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="font-heading text-xl font-semibold text-emerald-600">
@@ -90,7 +95,7 @@ export const Header = () => {
                                     <a
                                         key={item.name}
                                         href={item.href}
-                                        className="font-heading -mx-3 block rounded-lg px-3 py-2 text-base font-normal leading-7 text-gray-900 hover:bg-green-200"
+                                        className="font-heading -mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-normal text-gray-900 hover:bg-green-200"
                                     >
                                         {item.name}
                                     </a>
@@ -99,7 +104,7 @@ export const Header = () => {
                             <div className="py-6">
                                 <a
                                     href="#contact"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-green-200"
+                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base leading-7 font-semibold text-gray-900 hover:bg-green-200"
                                 >
                                     Work with Jake →
                                 </a>
