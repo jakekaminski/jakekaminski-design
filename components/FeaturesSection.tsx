@@ -25,12 +25,12 @@ const features = [
     },
 ]
 
-export default function FeaturesSection() {
+export function FeaturesSection() {
     return (
         <section id="services" className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto max-w-2xl lg:text-center">
-                    <h2 className="text-base font-normal leading-7 text-emerald-600">
+                    <h2 className="text-base leading-7 font-normal text-emerald-600">
                         Services
                     </h2>
                     <p className="font-heading mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -45,7 +45,7 @@ export default function FeaturesSection() {
                     <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
                         {features.map((feature) => (
                             <div key={feature.name} className="flex flex-col">
-                                <dt className="flex items-center gap-x-3 font-heading text-lg font-normal leading-7 text-gray-900">
+                                <dt className="font-heading flex items-center gap-x-3 text-lg leading-7 font-normal text-gray-900">
                                     <feature.icon
                                         className="h-5 w-5 flex-none text-emerald-600"
                                         aria-hidden="true"
@@ -65,3 +65,5 @@ export default function FeaturesSection() {
         </section>
     )
 }
+
+export default FeaturesSection

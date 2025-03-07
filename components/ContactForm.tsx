@@ -4,12 +4,12 @@ import {
     PhoneIcon,
 } from '@heroicons/react/24/outline'
 
-export default function ContactForm() {
+export function ContactForm() {
     return (
         <section id="contact" className="relative isolate bg-white">
             <div className="mx-auto grid max-w-7xl grid-cols-1">
-                <div className="grid grid-cols-1 gap-6 relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48 lg:grid-cols-2 lg:gap-10">
-                    <div className="flex flex-col justify-center mx-auto max-w-xl lg:mx-0 lg:max-w-lg ">
+                <div className="relative grid grid-cols-1 gap-6 px-6 pt-24 pb-20 sm:pt-32 lg:static lg:grid-cols-2 lg:gap-10 lg:px-8 lg:py-48">
+                    <div className="mx-auto flex max-w-xl flex-col justify-center lg:mx-0 lg:max-w-lg">
                         <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10">
                             <svg
                                 className="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
@@ -111,12 +111,12 @@ export default function ContactForm() {
                         </dl>
                     </div>
                     <div className="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
-                        <div className="shadow-lg md:rounded-3xl">
-                            <div className="bg-green-500 rounded-lg overflow-hidden [clip-path:inset(0)] md:[clip-path:inset(0_round_theme(borderRadius.3xl))]">
+                        <div className="md:rounded-3xl">
+                            <div className="relative h-[24rem] rounded-3xl bg-emerald-700">
                                 <img
-                                    src="images/headshot-2024.jpg"
+                                    src="images/headshot-2024.png"
                                     alt="Jake Kaminski"
-                                    className="w-full h-[32rem] object-cover"
+                                    className="absolute bottom-0 h-[32rem] w-full rounded-3xl object-cover"
                                 />
                             </div>
                         </div>
@@ -230,3 +230,5 @@ export default function ContactForm() {
         </section>
     )
 }
+
+export default ContactForm

@@ -1,10 +1,11 @@
-import ProjectsSection from '@/components/ProjectsSection'
+import {
+    ContactForm,
+    ContentSection,
+    FeaturesSection,
+    HomeHero,
+    ProjectsSection,
+} from '@/components'
 import Head from 'next/head'
-import ContactForm from '../components/ContactForm'
-import ContentSection from '../components/ContentSection'
-import FeaturesSection from '../components/FeaturesSection'
-import HomeHero from '../components/HomeHero'
-import { Header } from '../components/layout'
 
 export default function HomePage() {
     return (

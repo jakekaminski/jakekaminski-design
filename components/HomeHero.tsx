@@ -1,4 +1,4 @@
-export default function HomeHero() {
+export function HomeHero() {
     return (
         <section id="hero" className="bg-white">
             <div className="relative isolate pt-14">
@@ -61,3 +61,5 @@ export default function HomeHero() {
         </section>
     )
 }
+
+export default HomeHero

@@ -1,17 +1,17 @@
-export default function ContentSection() {
+export function ContentSection() {
     return (
         <section id="about" className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                    <div className="lg:pr-4 h-full">
-                        <div className="relative overflow-hidden rounded-3xl bg-gray-900 shadow-2xl lg:max-w-lg min-h-80 lg:h-full">
+                    <div className="h-full lg:pr-4">
+                        <div className="relative min-h-80 overflow-hidden rounded-3xl bg-gray-900 shadow-2xl lg:h-full lg:max-w-lg">
                             <img
                                 className="absolute inset-0 h-full w-full object-cover brightness-125"
                                 src="images/hadassah-carlson-GkGKXyQANW8-unsplash.jpg"
                                 alt="abandoned house on a beach"
                             />
                             {/* <div className="absolute inset-0 bg-gray-500 mix-blend-multiply" /> */}
-                            <p className="absolute bottom-0 inset-x-0 text-xs text-gray-800 px-4 pb-4">
+                            <p className="absolute inset-x-0 bottom-0 px-4 pb-4 text-xs text-gray-800">
                                 Photo by{' '}
                                 <a href="https://unsplash.com/@hadassah_carlson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
                                     Hadassah Carlson
@@ -25,7 +25,7 @@ export default function ContentSection() {
                     </div>
                     <div>
                         <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
-                            <p className="text-base font-semibold leading-7 text-emerald-600">
+                            <p className="text-base leading-7 font-semibold text-emerald-600">
                                 About
                             </p>
                             <h1 className="font-heading mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
@@ -69,7 +69,7 @@ export default function ContentSection() {
                         <div className="mt-10 flex">
                             <a
                                 href="#contact"
-                                className="text-base font-semibold leading-7 text-emerald-600 hover:text-emerald-700 hover:underline hover:underline-offset-2"
+                                className="text-base leading-7 font-semibold text-emerald-600 hover:text-emerald-700 hover:underline hover:underline-offset-2"
                             >
                                 Reach out today to get started{' '}
                                 <span aria-hidden="true">&rarr;</span>
@@ -81,3 +81,5 @@ export default function ContentSection() {
         </section>
     )
 }
+
+export default ContentSection

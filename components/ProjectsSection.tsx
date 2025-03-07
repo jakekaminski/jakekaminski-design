@@ -1,5 +1,5 @@
 import { getPosts, getTags } from '@/app/posts/getPosts'
-export default async function ProjectsSection() {
+export async function ProjectsSection() {
     const tags = await getTags()
     const posts = await getPosts()
 
@@ -70,3 +70,5 @@ export default async function ProjectsSection() {
         </div>
     )
 }
+
+export default ProjectsSection

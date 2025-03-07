@@ -1,10 +1,9 @@
+import { Header } from '@/components'
 import { Karla, Young_Serif } from 'next/font/google'
-import { Navbar, ThemeSwitch } from 'nextra-theme-blog'
 import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { PropsWithChildren } from 'react'
 import './app.css'
-import { Header } from '@/components'
 
 export const metadata = {
     title: 'Jake Kaminski • Website Marketing',
@@ -32,6 +31,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
             suppressHydrationWarning
             className={`${youngSerif.variable} ${karla.variable} font-body scroll-smooth`}
         >
+            <Head backgroundColor={{ dark: '#030712', light: '#FFFFFF' }} />
             <body>
                 {' '}
                 <Header pageMap={await getPageMap()} />
