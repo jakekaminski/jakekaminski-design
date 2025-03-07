@@ -7,6 +7,7 @@ tags: [web, design, development]
 ---
 
 import { Callout } from 'nextra/components'
+import { GalleryGrid } from '@/components'
 
 ## Overview
 
@@ -213,18 +214,40 @@ include:
     </figcaption>
 </figure>
 
-## Wrap up
-
-This was definitely one of the most challenging and rewarding projects I've
-worked on. It was a great opportunity to work with a talented team and help them
-create a website that truly reflects their brand and values.
-
-I learned a lot about user research, design systems, and development in the
-process, and I'm excited to see how the new website will continue to evolve and
-grow!
-
-<Callout>
-    **Takeaway:** A design system is a powerful tool that can help you create a
-    consistent and scalable website. It can also make development much faster
-    and easier.
+<Callout emoji="🎉">
+    You can see Precision's live site at https://precisionplanting.com
 </Callout>
+
+<div className="ml-[calc(-50vw+50%)] w-screen">
+    <GalleryGrid
+        className="grid-rows-3"
+        images={[
+            {
+                src: '/images/prp-new-homepage.png',
+                alt: 'Precision Planting new homepage',
+            },
+            {
+                src: '/images/prp-new-products-page.png',
+                alt: 'Precision Planting new products page',
+                mobileMockup: true,
+            },
+            {
+                src: '/images/prp-new-resources-page.png',
+                alt: 'Precision Planting new resources page',
+            },
+            {
+                src: '/images/prp-new-dealer-locator.png',
+                alt: 'Precision Planting new dealer locator',
+            },
+            {
+                src: '/images/prp-new-product-page.png',
+                alt: 'Precision Planting new product page',
+            },
+            {
+                src: '/images/prp-new-careers-page.png',
+                alt: 'Precision Planting new careers page',
+            },
+        ]}
+    />
+
+</div>

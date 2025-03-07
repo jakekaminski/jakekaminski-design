@@ -8,4 +8,120 @@ thumbnail: /images/radicle-ag-thumbnail.png
 tags: [web, design, development]
 ---
 
-🚧 Coming soon!
+import { Callout } from 'nextra/components'
+import { GalleryGrid } from '@/components'
+
+## Overview
+
+Radicle Agronomics is a groundbreaking (pun-intended) agtech brand that has
+created the world's first fully-automated soil sampling lab. In early 2024,
+however, they had a problem: they had launched their product publicly without a
+public-facing website. They needed a website that could showcase their product
+and services, educate potential customers on the benefits of their technology,
+and provide a way for customers to contact them.
+
+<figure>
+    <img
+        src="/images/radag-radicle-lab.png"
+        alt="Radicle Agronomics Radicle Lab"
+    />
+    <figcaption className="text-center">
+        Radicle Agronomics' fully automated soil-testing lab.
+    </figcaption>
+</figure>
+
+{/* prettier-ignore-start */}
+
+<Callout emoji="🎯">
+  **Goal:** create a new website design that could
+    - _Showcase_ Radicle Agronomics' groundbreaking technology
+    - _Educate_ potential customers on the benefits of their technology
+    - _Convert_ visitors into leads.
+</Callout>
+
+{/* prettier-ignore-end */}
+
+## Process
+
+### Content Strategy
+
+The first step in the process was to create a content strategy that would guide
+the design and development of the website. We worked with Radicle Agronomics'
+marketing team to identify the key messages they wanted to convey, the target
+audience they wanted to reach, and the actions they wanted visitors to take on
+the site.
+
+In most projects, I wait to start high-fidelity design until the content is
+ready. However, in this case, I started designing the website in parallel with
+content creation. This allowed us to iterate on the design and content
+simultaneously, which helped us create a more cohesive and effective website.
+
+<figure>
+    <img
+        src="/images/radag-page-templates.png"
+        alt="Radicle Agronomics design system"
+    />
+    <figcaption className="text-center">
+        Radicle Agronomics' page content templates.
+    </figcaption>
+</figure>
+
+### Design System
+
+Once we had a clear content strategy in place, I began designing the website. I
+created a comprehensive design system in Figma that included styles, components,
+and page templates. The design system was based on Radicle Agronomics' existing
+brand guidelines and was designed to be flexible and scalable as the brand grew.
+
+<figure>
+    <img
+        src="/images/radag-design-system.png"
+        alt="Radicle Agronomics design system"
+    />
+    <figcaption className="text-center">
+        Radicle Agronomics' web design system.
+    </figcaption>
+</figure>
+
+### Development
+
+With the design system in place, we began developing the website. We used
+Next.js and Chakra UI to build the site, which allowed us to create a fast,
+responsive, and accessible website that would work well on all devices. We also
+integrated the site with Kontent.ai headless CMS and HubSpot CRM ensure that
+leads generated through the site were captured and tracked.
+
+## Outcome
+
+After several rounds of testing and feedback, we launched the website in
+early 2024. The site was well-received by Radicle Agronomics' customers and
+partners, and has helped the company generate new leads and grow their business.
+
+The Radicle Agronomics website has been a huge success for the brand. It has
+helped them showcase their groundbreaking technology, educate potential
+customers on the benefits of their technology, and generate new leads. The
+website has also helped Radicle Agronomics establish themselves as a leader in
+the precision agriculture industry and has set them up for future growth.
+
+<div className="ml-[calc(-50vw+50%)] w-screen">
+    <GalleryGrid
+        images={[
+            {
+                src: '/images/radag-homepage.png',
+                alt: 'Radicle Agronomics home page',
+            },
+            {
+                src: '/images/radag-product-page.png',
+                alt: 'Radicle Agronomics product page',
+            },
+            {
+                src: '/images/radag-radicle-app-features.png',
+                alt: 'Radicle Agronomics Radicle App page features section',
+            },
+            {
+                src: '/images/radag-radicle-lab-comparison.png',
+                alt: 'Radicle Agronomics Radicle Lab comparison section',
+            },
+        ]}
+    />
+</div>

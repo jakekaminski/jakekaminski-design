@@ -1,5 +1,6 @@
 /* eslint typescript-sort-keys/interface: error */
 import type { ReadingTime } from 'nextra'
+import { HTMLProps } from 'react'
 
 export type BlogMetadata = {
     author?: string
@@ -9,3 +10,5 @@ export type BlogMetadata = {
     tags?: []
     title?: string
 }
+
+export type ClassName = { className?: HTMLProps<HTMLElement>['className'] }
