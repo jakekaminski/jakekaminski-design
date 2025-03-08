@@ -52,8 +52,7 @@ export function HomeHero() {
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <div className="mx-auto max-w-2xl text-center">
                             <h1 className="font-heading text-5xl font-normal tracking-tight text-balance text-gray-900 sm:text-7xl">
-                                I make web experiences that cost less and do
-                                more.
+                                Web experiences that cost less and do more.
                             </h1>
                             <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
                                 I'm Jake, a web designer & developer from
@@ -81,7 +80,7 @@ export function HomeHero() {
                 </div>
                 <div
                     aria-hidden="true"
-                    className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                    className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-x-hidden blur-3xl sm:top-[calc(100%-30rem)]"
                 >
                     <div
                         style={{

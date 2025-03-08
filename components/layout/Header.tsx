@@ -41,7 +41,7 @@ export const Header = ({ pageMap }: HeaderProps) => {
                         </a>
                     ))}
                 </div>
-                <div className="hidden flex-1 items-center justify-end gap-x-6 lg:flex">
+                <div className="flex flex-1 items-center justify-end gap-x-6">
                     <a
                         href="/#contact"
                         className="rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
@@ -66,10 +66,10 @@ export const Header = ({ pageMap }: HeaderProps) => {
                 open={mobileMenuOpen}
                 onClose={setMobileMenuOpen}
             >
-                <Dialog.Panel className="font-body fixed inset-0 z-40 w-full overflow-y-auto bg-white px-6 py-6 sm:ring-1 sm:ring-gray-900/10">
+                <Dialog.Panel className="font-body fixed inset-x-0 top-0 z-40 w-full overflow-y-auto bg-gray-50 p-6 shadow-2xl sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center gap-x-6">
                         <a href="#" className="-m-1.5 p-1.5">
-                            <span className="font-heading text-xl font-semibold text-emerald-600">
+                            <span className="font-heading text-2xl font-normal text-emerald-600">
                                 Jake Kaminski
                             </span>
                         </a>
@@ -101,14 +101,14 @@ export const Header = ({ pageMap }: HeaderProps) => {
                                     </a>
                                 ))}
                             </div>
-                            <div className="py-6">
+                            {/* <div className="py-6">
                                 <a
                                     href="#contact"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base leading-7 font-semibold text-gray-900 hover:bg-green-200"
                                 >
                                     Work with Jake →
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </Dialog.Panel>

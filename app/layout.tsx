@@ -32,7 +32,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
             className={`${youngSerif.variable} ${karla.variable} font-body scroll-smooth`}
         >
             <Head backgroundColor={{ dark: '#ffffff', light: '#ffffff' }} />
-            <body>
+            <body className="max-w-screen overflow-x-hidden">
                 {' '}
                 <Header pageMap={await getPageMap()} />
                 {children}
