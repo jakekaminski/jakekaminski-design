@@ -1,6 +1,5 @@
 import { Footer, Layout } from 'nextra-theme-blog'
 import 'nextra-theme-blog/style.css'
-import { Head } from 'nextra/components'
 import { PropsWithChildren } from 'react'
 
 export const metadata = {
@@ -12,8 +11,7 @@ export default async function ProjectPageLayout({
 }: PropsWithChildren) {
     return (
         <>
-            <Head backgroundColor={{ dark: '#ffffff', light: '#ffffff' }} />
-            <Layout>
+            <Layout nextThemes={{ forcedTheme: 'light' }}>
                 {children}
                 <Footer>{new Date().getFullYear()} © Jake Kaminski.</Footer>
             </Layout>

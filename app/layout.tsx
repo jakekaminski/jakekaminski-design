@@ -1,5 +1,6 @@
 import { Header } from '@/components'
 import { Karla, Young_Serif } from 'next/font/google'
+import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { PropsWithChildren } from 'react'
 import './app.css'
@@ -30,6 +31,7 @@ export default async function RootLayout({ children }: PropsWithChildren) {
             suppressHydrationWarning
             className={`${youngSerif.variable} ${karla.variable} font-body scroll-smooth`}
         >
+            <Head backgroundColor={{ dark: '#ffffff', light: '#ffffff' }} />
             <body>
                 {' '}
                 <Header pageMap={await getPageMap()} />
