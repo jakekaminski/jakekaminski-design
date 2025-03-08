@@ -10,18 +10,24 @@ const features = [
         description:
             "You don't have reinvent the wheel to have a website that stands out. I'll work with you to find a design that fits your brand and impresses every visitor.",
         icon: TrophyIcon,
+        iconColor: 'text-emerald-600',
+        iconBg: 'bg-emerald-200',
     },
     {
         name: 'Pain-free backends',
         description:
             "Updating your website's content and adding new features should be easy. I'll help you choose a website admin that's easy to update and maintain.",
         icon: PencilIcon,
+        iconColor: 'text-amber-600',
+        iconBg: 'bg-amber-200',
     },
     {
         name: 'Cost-effective solutions',
         description:
-            "Above all else, your website should be adding value to your business, not draining your wallet. I'll help you build your website on a budget that works for you.",
+            "Your website should be adding value to your business, not draining your wallet. I'll help you build your website on a budget that works for you.",
         icon: CurrencyDollarIcon,
+        iconColor: 'text-blue-600',
+        iconBg: 'bg-blue-200',
     },
 ]
 
@@ -34,7 +40,10 @@ export function FeaturesSection() {
                         Services
                     </h2>
                     <p className="font-heading mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Your website. Simplified.
+                        Your website.{' '}
+                        <u className="decoration-amber-500 decoration-4 underline-offset-4">
+                            Simplified.
+                        </u>
                     </p>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
                         Your website should work for you—not the other way
@@ -46,10 +55,14 @@ export function FeaturesSection() {
                         {features.map((feature) => (
                             <div key={feature.name} className="flex flex-col">
                                 <dt className="font-heading flex items-center gap-x-3 text-lg leading-7 font-normal text-gray-900">
-                                    <feature.icon
-                                        className="h-5 w-5 flex-none text-emerald-600"
-                                        aria-hidden="true"
-                                    />
+                                    <span
+                                        className={`inline-flex h-10 w-10 items-center justify-center rounded-lg ${feature.iconBg ?? 'bg-emerald-600'}`}
+                                    >
+                                        <feature.icon
+                                            className={`h-5 w-5 flex-none ${feature.iconColor ?? 'text-emerald-600'}`}
+                                            aria-hidden="true"
+                                        />
+                                    </span>
                                     {feature.name}
                                 </dt>
                                 <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">

@@ -3,24 +3,25 @@ export function ContentSection() {
         <section id="about" className="bg-white py-24 sm:py-32">
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
                 <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                    <div className="h-full lg:pr-4">
-                        <div className="relative min-h-80 overflow-hidden rounded-3xl bg-gray-900 shadow-2xl lg:h-full lg:max-w-lg">
+                    <div className="flex h-full items-center lg:pr-4">
+                        <div className="relative isolate">
                             <img
-                                className="absolute inset-0 h-full w-full object-cover brightness-125"
-                                src="images/hadassah-carlson-GkGKXyQANW8-unsplash.jpg"
+                                className="mx-auto h-full w-10/12 object-contain"
+                                src="images/illustration-macbook.png"
                                 alt="abandoned house on a beach"
                             />
-                            {/* <div className="absolute inset-0 bg-gray-500 mix-blend-multiply" /> */}
-                            <p className="absolute inset-x-0 bottom-0 px-4 pb-4 text-xs text-gray-800">
-                                Photo by{' '}
-                                <a href="https://unsplash.com/@hadassah_carlson?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-                                    Hadassah Carlson
-                                </a>{' '}
-                                on{' '}
-                                <a href="https://unsplash.com/photos/white-and-gray-concrete-house-under-white-clouds-during-daytime-GkGKXyQANW8?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
-                                    Unsplash
-                                </a>
-                            </p>
+                            <div
+                                aria-hidden="true"
+                                className="absolute inset-x-0 top-0 -z-10 h-1/2 transform-gpu blur-2xl"
+                            >
+                                <div
+                                    style={{
+                                        clipPath:
+                                            'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
+                                    }}
+                                    className="relative mx-auto h-[24rem] w-[32rem] bg-gradient-to-tr from-orange-600 to-amber-400 opacity-30"
+                                />
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -34,15 +35,15 @@ export function ContentSection() {
                             </h1>
                             <div className="max-w-xl">
                                 <p className="mt-6">
-                                    Maybe you've stretched and hacked your
-                                    website template as far as it can go, but it
-                                    still looks like...a template. Maybe you
-                                    find yourself dreading anytime you have to
-                                    make an update to your website, because
+                                    Maybe you've hacked your website template as
+                                    far as it can go, but it still looks like,
+                                    well, a <i>template</i>. Maybe you dread
+                                    making updates to your website, because
                                     going into your website's backend is a pain
-                                    in <i>your</i> backend. And with rising
-                                    costs, your website's starting to eat up
-                                    more and more of your budget every month.
+                                    in <i>your</i> backend. And on top of all
+                                    that, your website's starting to eat up{' '}
+                                    <i>more and more</i> of your budget each
+                                    month.
                                 </p>
                                 <p className="mt-8">
                                     You sit back and wonder, "Wasn't this thing
@@ -50,18 +51,28 @@ export function ContentSection() {
                                 </p>
                                 <p className="mt-8">
                                     I've been there. After working in web
-                                    marketing for several years, I've been
-                                    frustrated by how confusing and misleading
-                                    popular website builders can be. That's why
-                                    I started working with businesses to help
-                                    them make sense of the madness and build
-                                    websites that work for them.
+                                    marketing for over five years, I've also
+                                    been frustrated by how confusing and
+                                    misleading popular website builders can be.
+                                    That's why I started working with businesses
+                                    to help them make sense of the madness and
+                                    build websites that work for them.
                                 </p>
                                 <p className="mt-8">
                                     And it happens with a few key ingredients:{' '}
                                     <b>
-                                        proven website designs built on painless
-                                        backends with cost-effective solutions.
+                                        <u className="decoration-emerald-500 decoration-3 underline-offset-3">
+                                            proven website designs
+                                        </u>{' '}
+                                        built on{' '}
+                                        <u className="decoration-amber-500 decoration-3 underline-offset-3">
+                                            painless backends
+                                        </u>{' '}
+                                        with{' '}
+                                        <u className="decoration-blue-500 decoration-3 underline-offset-3">
+                                            cost-effective solutions
+                                        </u>
+                                        .
                                     </b>
                                 </p>
                             </div>

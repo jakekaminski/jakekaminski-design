@@ -96,6 +96,7 @@ export const useMDXComponents = ({
                 )
             }
             const dateObj = date && new Date(date)
+
             return (
                 <>
                     <h1 className="font-heading !font-normal !tracking-normal">

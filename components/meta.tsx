@@ -1,4 +1,3 @@
-import { Link } from 'next-view-transitions'
 import type { FC, ReactNode } from 'react'
 import type { BlogMetadata } from '../utils/types'
 import { GoBack } from './go-back'
@@ -11,9 +10,12 @@ export const Meta: FC<BlogMetadata & { children: ReactNode }> = ({
     children,
 }) => {
     const tagsEl = tags?.map((t) => (
-        <Link key={t} href={`/tags/${t}`} className="nextra-tag">
+        <div
+            key={t}
+            className="rounded-full border border-gray-200 bg-gray-50 px-1.5 py-0.5 text-sm font-medium text-gray-600"
+        >
             {t}
-        </Link>
+        </div>
     ))
 
     const readingTimeText = readingTime?.text
