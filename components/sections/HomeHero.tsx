@@ -52,12 +52,12 @@ export function HomeHero() {
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <div className="mx-auto max-w-2xl text-center">
                             <h1 className="font-heading text-5xl font-normal tracking-tight text-balance text-gray-900 sm:text-7xl">
-                                Web experiences that cost less and do more.
+                                Digital marketing that costs less and does more.
                             </h1>
                             <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                                I'm Jake, a web designer & developer from
-                                Central Illinois. I specialize in making
-                                websites that are beautiful, painless, and
+                                I'm Jake, a designer & web developer from
+                                Central Illinois. I specialize in digital
+                                marketing that is beautiful, painless, and
                                 cost-effective.
                             </p>
                             <div className="mt-10 flex items-center justify-center gap-x-6">

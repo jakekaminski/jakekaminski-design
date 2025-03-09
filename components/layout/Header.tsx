@@ -1,5 +1,5 @@
 'use client'
-import { Dialog } from '@headlessui/react'
+import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { getPageMap } from 'nextra/page-map'
 import { useState } from 'react'
@@ -41,7 +41,7 @@ export const Header = ({ pageMap }: HeaderProps) => {
                         </a>
                     ))}
                 </div>
-                <div className="flex flex-1 items-center justify-end gap-x-6">
+                <div className="hidden flex-1 items-center justify-end gap-x-6 lg:flex">
                     <a
                         href="/#contact"
                         className="rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
@@ -57,27 +57,29 @@ export const Header = ({ pageMap }: HeaderProps) => {
                     >
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                        {/* <div className="relative h-6 w-6">
+                            <div
+                                className={`absolute h-0.5 w-full rounded-xs bg-black transition-transform duration-150 ease-in ${mobileMenuOpen ? 'translate-y-2.5 translate-3d rotate-45' : ''}`}
+                            ></div>
+                            <div className="absolute top-1.5 h-0.5 w-full rounded-xs bg-black transition-transform duration-150 ease-in"></div>
+                            <div className="absolute top-3 h-0.5 w-full rounded-xs bg-black transition-transform duration-150 ease-in"></div>
+                        </div> */}
                     </button>
                 </div>
             </nav>
             <Dialog
                 as="div"
-                className="lg:hidden"
+                className="z-40 transition duration-200 ease-out data-[closed]:opacity-0 lg:hidden"
                 open={mobileMenuOpen}
-                onClose={setMobileMenuOpen}
+                transition
+                onClose={() => setMobileMenuOpen(false)}
             >
-                <Dialog.Panel className="font-body fixed inset-x-0 top-0 z-40 w-full overflow-y-auto bg-gray-50 p-6 shadow-2xl sm:ring-1 sm:ring-gray-900/10">
-                    <div className="flex items-center gap-x-6">
+                <DialogPanel className="font-body fixed inset-x-0 top-0 z-40 w-full overflow-y-auto bg-gray-50 p-6 shadow-2xl sm:ring-1 sm:ring-gray-900/10">
+                    <div className="flex items-center justify-between gap-x-6">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="font-heading text-2xl font-normal text-emerald-600">
                                 Jake Kaminski
                             </span>
-                        </a>
-                        <a
-                            href="#contact"
-                            className="ml-auto rounded-md bg-emerald-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
-                        >
-                            Work with Jake
                         </a>
                         <button
                             type="button"
@@ -96,22 +98,24 @@ export const Header = ({ pageMap }: HeaderProps) => {
                                         key={item.name}
                                         href={item.href}
                                         className="font-heading -mx-3 block rounded-lg px-3 py-2 text-base leading-7 font-normal text-gray-900 hover:bg-green-200"
+                                        onClick={() => setMobileMenuOpen(false)}
                                     >
                                         {item.name}
                                     </a>
                                 ))}
                             </div>
-                            {/* <div className="py-6">
+                            <div className="py-6">
                                 <a
-                                    href="#contact"
+                                    href="/#contact"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base leading-7 font-semibold text-gray-900 hover:bg-green-200"
+                                    onClick={() => setMobileMenuOpen(false)}
                                 >
                                     Work with Jake →
                                 </a>
-                            </div> */}
+                            </div>
                         </div>
                     </div>
-                </Dialog.Panel>
+                </DialogPanel>
             </Dialog>
         </header>
     )

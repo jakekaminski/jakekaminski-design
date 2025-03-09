@@ -1,7 +1,7 @@
 export function ContentSection() {
     return (
         <section
-            id="about"
+            id="how-it-works"
             className="overflow-x-hidden bg-white py-24 sm:py-32"
         >
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -11,7 +11,7 @@ export function ContentSection() {
                             <img
                                 className="mx-auto h-full w-10/12 object-contain"
                                 src="images/illustration-macbook.png"
-                                alt="abandoned house on a beach"
+                                alt="Laptop with swear symbol on it"
                             />
                             <div
                                 aria-hidden="true"
@@ -30,21 +30,21 @@ export function ContentSection() {
                     <div>
                         <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
                             <p className="text-base leading-7 font-semibold text-emerald-600">
-                                About
+                                How It Works
                             </p>
                             <h1 className="font-heading mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                                Let's face it. Your website isn't what you
+                                Let's face it. Digital marketing isn't what you
                                 dreamed it would be.
                             </h1>
                             <div className="max-w-xl">
                                 <p className="mt-6">
                                     Maybe you've hacked your website template as
-                                    far as it can go, but it still looks like,
+                                    far as it can go, but it still looks like...
                                     well, a <i>template</i>. Maybe you dread
-                                    making updates to your website, because
-                                    going into your website's backend is a pain
-                                    in <i>your</i> backend. And on top of all
-                                    that, your website's starting to eat up{' '}
+                                    posting on social media, because "National
+                                    Cheese Lovers' Day" just isn't cutting it
+                                    anymore (pun-intended). And on top of all
+                                    that, marketing is starting to eat up{' '}
                                     <i>more and more</i> of your budget each
                                     month.
                                 </p>
@@ -53,27 +53,27 @@ export function ContentSection() {
                                     supposed to be <b>making me money</b>?"
                                 </p>
                                 <p className="mt-8">
-                                    I've been there. After working in web
+                                    I've been there. After working in digital
                                     marketing for over five years, I've also
                                     been frustrated by how confusing and
-                                    misleading popular website builders can be.
-                                    That's why I started working with businesses
-                                    to help them make sense of the madness and
-                                    build websites that work for them.
+                                    misleading popular platforms can be. That's
+                                    why I started working with businesses to
+                                    help them make sense of the madness and
+                                    build digital marketing that works for them.
                                 </p>
                                 <p className="mt-8">
                                     And it happens with a few key ingredients:{' '}
                                     <b>
                                         <u className="decoration-emerald-500 decoration-3 underline-offset-3">
-                                            proven website designs
+                                            proven designs
                                         </u>{' '}
                                         built on{' '}
                                         <u className="decoration-amber-500 decoration-3 underline-offset-3">
-                                            painless backends
+                                            painless platforms
                                         </u>{' '}
                                         with{' '}
                                         <u className="decoration-blue-500 decoration-3 underline-offset-3">
-                                            cost-effective solutions
+                                            cost-effective strategies
                                         </u>
                                         .
                                     </b>

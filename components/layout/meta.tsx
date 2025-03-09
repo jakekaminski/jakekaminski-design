@@ -1,5 +1,5 @@
 import type { FC, ReactNode } from 'react'
-import type { BlogMetadata } from '../utils/types'
+import type { BlogMetadata } from '../../utils/types'
 import { GoBack } from './go-back'
 
 export const Meta: FC<BlogMetadata & { children: ReactNode }> = ({

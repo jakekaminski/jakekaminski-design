@@ -1,5 +1,5 @@
 import { ClassName } from '@/utils'
-import { HTMLProps } from 'react'
+import { ImageWithLightbox } from '../elements'
 
 export type GalleryGridProps = {
     images: {
@@ -26,7 +26,7 @@ export function GalleryGrid({ images }: GalleryGridProps) {
                             {image.mobileMockup ? (
                                 <div className="@container relative grow max-lg:mx-auto max-lg:max-w-sm">
                                     <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                                        <img
+                                        <ImageWithLightbox
                                             className="not-prose size-full object-cover object-top"
                                             src={image.src}
                                             alt={image.alt}
@@ -34,7 +34,7 @@ export function GalleryGrid({ images }: GalleryGridProps) {
                                     </div>
                                 </div>
                             ) : (
-                                <img
+                                <ImageWithLightbox
                                     className="not-prose size-full object-contain"
                                     src={image.src}
                                     alt={image.alt}

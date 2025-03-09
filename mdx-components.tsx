@@ -15,7 +15,7 @@ import {
 import type { MDXComponents } from 'nextra/mdx-components'
 import { useMDXComponents as getNextraMDXComponents } from 'nextra/mdx-components'
 import type { ComponentProps, FC } from 'react'
-import { Meta } from './components/meta'
+import { Meta } from './components/layout/meta'
 import { isValidDate } from './utils/is-valid-date'
 import type { BlogMetadata } from './utils/types'
 

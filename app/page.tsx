@@ -1,4 +1,5 @@
 import {
+    AboutSection,
     ContactForm,
     ContentSection,
     FeaturesSection,
@@ -17,6 +18,7 @@ export default function HomePage() {
             </Head>
             <>
                 <HomeHero />
+                <AboutSection />
                 <ProjectsSection />
                 <ContentSection />
                 <FeaturesSection />

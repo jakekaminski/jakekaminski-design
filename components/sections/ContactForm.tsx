@@ -116,11 +116,16 @@ export function ContactForm() {
                     <div className="mt-20 sm:mt-24 md:mx-auto md:max-w-2xl lg:mx-0 lg:mt-0 lg:w-screen">
                         <div className="md:rounded-3xl">
                             <div className="relative h-[24rem] rounded-3xl bg-emerald-700">
-                                <img
-                                    src="images/headshot-2024.png"
-                                    alt="Jake Kaminski"
-                                    className="absolute bottom-0 h-[32rem] w-full rounded-3xl object-cover"
-                                />
+                                <figure>
+                                    <img
+                                        src="images/obi-wan.png"
+                                        alt="Obi-wan lying in the grass"
+                                        className="absolute bottom-0 h-[32rem] w-full rounded-3xl object-cover"
+                                    />
+                                    <figcaption className="absolute inset-x-0 -bottom-10 text-center text-gray-600">
+                                        🐾 Dog tax
+                                    </figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
