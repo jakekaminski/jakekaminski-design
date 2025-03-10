@@ -1,30 +1,3 @@
-import {
-    CloudArrowUpIcon,
-    LockClosedIcon,
-    ServerIcon,
-} from '@heroicons/react/20/solid'
-
-const features = [
-    {
-        name: 'Push to deploy.',
-        description:
-            'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
-        icon: CloudArrowUpIcon,
-    },
-    {
-        name: 'SSL certificates.',
-        description:
-            'Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.',
-        icon: LockClosedIcon,
-    },
-    {
-        name: 'Database backups.',
-        description:
-            'Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.',
-        icon: ServerIcon,
-    },
-]
-
 export function AboutSection() {
     return (
         <section
@@ -42,10 +15,10 @@ export function AboutSection() {
                                 Super-nerd-turned-marketer
                             </p>
                             <p className="mt-6 text-lg/8 text-gray-600">
-                                Though my career started software, from the
+                                Though my career started in software, from the
                                 moment I launched my first website, I was
                                 hooked. Now I help businesses make sense of the
-                                mess in digital marketing, from A/B testing to
+                                mess of digital marketing, from A/B testing to
                                 z-indexing.
                             </p>
                             <div className="mt-10 flex items-center gap-x-6">
