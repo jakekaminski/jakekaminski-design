@@ -113,11 +113,14 @@ export const useMDXComponents = ({
                             </time>
                         )}
                     </Meta>
-                    <img
-                        className="w-full object-cover"
-                        src={(metadata as any).thumbnail}
-                        alt=""
-                    />
+                    {!(metadata as any).hideThumbnail && (
+                        <img
+                            className="w-full object-cover"
+                            src={(metadata as any).thumbnail}
+                            alt=""
+                        />
+                    )}
+
                     {children}
                 </>
             )

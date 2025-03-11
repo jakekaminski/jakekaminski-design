@@ -57,7 +57,7 @@ export function ContactForm() {
                                 />
                             </svg>
                         </div>
-                        <h2 className="font-heading text-3xl font-bold tracking-tight text-gray-900">
+                        <h2 className="font-heading text-3xl font-normal tracking-tight text-gray-900">
                             Get in touch
                         </h2>
                         <p className="mt-6 text-lg leading-8 text-gray-600">

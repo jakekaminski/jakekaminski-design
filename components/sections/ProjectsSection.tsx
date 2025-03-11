@@ -35,19 +35,19 @@ export async function ProjectsSection() {
                             <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm/6 text-gray-700">
                                 <time
                                     dateTime={new Date(
-                                        project.frontMatter.timestamp
+                                        project.frontMatter.date
                                     ).toLocaleDateString()}
                                     className="mr-8"
                                 >
                                     {new Date(
-                                        project.frontMatter.timestamp
+                                        project.frontMatter.date
                                     ).toLocaleDateString(undefined, {
                                         dateStyle: 'medium',
                                         timeStyle: undefined,
                                     })}
                                 </time>
                             </div>
-                            <h3 className="font-heading mt-3 text-xl/8 text-gray-950">
+                            <h3 className="font-heading mt-3 text-xl/8 font-normal text-gray-950">
                                 <a href={project.route}>
                                     <span className="absolute inset-0" />
                                     {project.title}

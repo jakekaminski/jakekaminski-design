@@ -12,14 +12,14 @@ export function AboutSection() {
                                 About
                             </h2>
                             <p className="font-heading mt-2 text-4xl font-normal tracking-tight text-pretty text-gray-900 sm:text-5xl">
-                                Super-nerd-turned-marketer
+                                Web-developer-turned-marketer
                             </p>
                             <p className="mt-6 text-lg/8 text-gray-600">
                                 Though my career started in software, from the
-                                moment I launched my first website, I was
-                                hooked. Now I help businesses make sense of the
-                                mess of digital marketing, from A/B testing to
-                                z-indexing.
+                                moment I launched my first marketing website, I
+                                was hooked. Now I help businesses make sense of
+                                the mess of digital marketing, from A/B testing
+                                to z-indexing.
                             </p>
                             <div className="mt-10 flex items-center gap-x-6">
                                 <a

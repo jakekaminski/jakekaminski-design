@@ -32,7 +32,7 @@ export function ContentSection() {
                             <p className="text-base leading-7 font-semibold text-emerald-600">
                                 How It Works
                             </p>
-                            <h1 className="font-heading mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            <h1 className="font-heading mt-2 text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl">
                                 Let's face it. Digital marketing isn't what you
                                 dreamed it would be.
                             </h1>

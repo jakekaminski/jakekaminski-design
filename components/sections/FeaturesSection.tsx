@@ -39,7 +39,7 @@ export function FeaturesSection() {
                     <h2 className="text-base leading-7 font-normal text-emerald-600">
                         Services
                     </h2>
-                    <p className="font-heading mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    <p className="font-heading mt-2 text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl">
                         Your digital marketing.{' '}
                         <u className="decoration-amber-500 decoration-4 underline-offset-4">
                             Simplified.
