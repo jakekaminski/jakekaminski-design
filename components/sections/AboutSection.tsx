@@ -38,15 +38,13 @@ export function AboutSection() {
                             </div>
                         </div>
                     </div>
-                    <div className="md:mx-auto md:max-w-2xl lg:mx-0 lg:w-screen">
-                        <div className="md:rounded-3xl">
-                            <div className="relative h-[24rem] rounded-3xl bg-emerald-700">
-                                <img
-                                    src="images/headshot-2024.png"
-                                    alt="Jake Kaminski"
-                                    className="absolute bottom-0 h-[32rem] w-full rounded-3xl object-cover"
-                                />
-                            </div>
+                    <div className="md:rounded-3xl">
+                        <div className="relative h-[24rem] rounded-3xl bg-emerald-700">
+                            <img
+                                src="images/headshot-2024.png"
+                                alt="Jake Kaminski"
+                                className="absolute bottom-0 h-[32rem] w-full rounded-3xl object-cover"
+                            />
                         </div>
                     </div>
                 </div>
