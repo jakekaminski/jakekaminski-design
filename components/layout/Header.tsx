@@ -69,7 +69,7 @@ export const Header = ({ pageMap }: HeaderProps) => {
             </nav>
             <Dialog
                 as="div"
-                className="z-40 transition duration-200 ease-out data-[closed]:opacity-0 lg:hidden"
+                className="z-40 h-auto transition duration-100 ease-out data-[closed]:h-0 data-[closed]:opacity-0 lg:hidden"
                 open={mobileMenuOpen}
                 transition
                 onClose={() => setMobileMenuOpen(false)}

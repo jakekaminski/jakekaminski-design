@@ -1,11 +1,11 @@
-import ImageWithLightbox from './ImageWithLightbox'
+import { ImageZoom } from 'nextra/components'
 
 export function ImageWithCaption({
     src,
     alt,
     className = '',
     caption,
-    lightbox = false,
+    lightbox = true,
 }: {
     src: string
     alt: string
@@ -18,7 +18,11 @@ export function ImageWithCaption({
     return (
         <figure className="size-full">
             {lightbox ? (
-                <ImageWithLightbox src={src} alt={alt} />
+                <ImageZoom
+                    src={src}
+                    alt={alt}
+                    className={`rounded-md border border-gray-200 ${className}`}
+                />
             ) : (
                 <img
                     src={src}
