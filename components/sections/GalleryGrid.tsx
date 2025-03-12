@@ -11,10 +11,12 @@ export type GalleryGridProps = {
     }[]
 } & ClassName
 
-export function GalleryGrid({ images }: GalleryGridProps) {
+export function GalleryGrid({ images, className }: GalleryGridProps) {
     return (
         <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-            <div className="mt-10 grid gap-4 sm:mt-16 lg:grid-cols-2 lg:grid-rows-2">
+            <div
+                className={`mt-10 grid gap-4 sm:mt-16 lg:grid-cols-2 lg:grid-rows-2 ${className}`}
+            >
                 {images.map((image, index) => (
                     <div
                         key={index}

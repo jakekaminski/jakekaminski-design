@@ -115,7 +115,7 @@ export const useMDXComponents = ({
                     </Meta>
                     {!(metadata as any).hideThumbnail && (
                         <img
-                            className="w-full object-cover"
+                            className="w-full rounded-md object-cover"
                             src={(metadata as any).thumbnail}
                             alt=""
                         />
