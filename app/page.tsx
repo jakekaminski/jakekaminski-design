@@ -1,6 +1,6 @@
 import {
     AboutSection,
-    ContactForm,
+    ContactSection,
     ContentSection,
     FeaturesSection,
     HomeHero,
@@ -22,7 +22,7 @@ export default function HomePage() {
                 <ProjectsSection />
                 <ContentSection />
                 <FeaturesSection />
-                <ContactForm />
+                <ContactSection />
             </>
         </>
     )

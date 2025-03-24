@@ -1,5 +1,5 @@
 export * from './AboutSection'
-export * from './ContactForm'
+export * from './ContactSection'
 export * from './ContentSection'
 export * from './FeaturesSection'
 export * from './GalleryGrid'

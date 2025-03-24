@@ -3,8 +3,9 @@ import {
     HomeModernIcon,
     PhoneIcon,
 } from '@heroicons/react/24/outline'
+import { ContactForm } from '../forms'
 
-export function ContactForm() {
+export function ContactSection() {
     return (
         <section
             id="contact"
@@ -61,8 +62,8 @@ export function ContactForm() {
                             Get in touch
                         </h2>
                         <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Reach out via email or phone and I'll put together a
-                            free estimate for your project. I'm always happy to
+                            Drop me a message and I'll put together a free
+                            estimate for your project. I'm always happy also to
                             meet up over coffee and talk through your ideas in
                             person!
                         </p>
@@ -113,8 +114,8 @@ export function ContactForm() {
                             </div>
                         </dl>
                     </div>
-                    <div className="mx-auto mt-20 w-full max-w-2xl sm:mt-24 md:rounded-3xl lg:mt-0">
-                        <div className="relative h-[20rem] rounded-3xl bg-emerald-700 lg:h-[28rem]">
+                    <div className="mx-auto w-full max-w-2xl">
+                        {/* <div className="relative h-[20rem] rounded-3xl bg-emerald-700 lg:h-[28rem]">
                             <figure>
                                 <img
                                     src="images/obi-wan.png"
@@ -125,7 +126,8 @@ export function ContactForm() {
                                     🐾 Dog tax
                                 </figcaption>
                             </figure>
-                        </div>
+                        </div> */}
+                        <ContactForm />
                     </div>
                 </div>
             </div>
@@ -133,4 +135,4 @@ export function ContactForm() {
     )
 }
 
-export default ContactForm
+export default ContactSection
