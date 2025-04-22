@@ -8,14 +8,22 @@ type FormState = {
 }
 
 export async function submitForm(formState: FormState, formData: FormData) {
-    const { firstName, lastName, email, phoneNumber, message } =
+    const { firstName, lastName, email, phoneNumber, message, website } =
         Object.fromEntries(formData.entries()) as {
             firstName: string
             lastName: string
             email: string
             phoneNumber: string
             message: string
+            website: string
         }
+
+    // Check if the form is being submitted by a bot
+    if (website) {
+        return {
+            message: 'Invalid form submission',
+        }
+    }
 
     const resend = new Resend(process.env.RESEND_API_KEY)
 

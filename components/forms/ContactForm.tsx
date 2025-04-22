@@ -1,10 +1,10 @@
 'use client'
 import { submitForm } from '@/app/actions'
-import { useFormState } from 'react-dom'
+import { useActionState } from 'react'
 import { AlertSuccess, SubmitButton } from '../ui'
 
 export function ContactForm() {
-    const [formState, action] = useFormState(submitForm, {
+    const [formState, action] = useActionState(submitForm, {
         message: '',
     })
 
@@ -101,6 +101,24 @@ export function ContactForm() {
                                 className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-600"
                                 defaultValue={''}
                                 required
+                            />
+                        </div>
+                    </div>
+                    <div className="hidden sm:col-span-2">
+                        <label
+                            htmlFor="website"
+                            className="block text-sm/6 font-semibold text-gray-900"
+                        >
+                            Website (leave this blank if you're not a robot 😉)
+                        </label>
+                        <div className="mt-2.5">
+                            <input
+                                id="website"
+                                name="website"
+                                type="text"
+                                autoComplete="off"
+                                tabIndex={-1}
+                                className="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-emerald-600"
                             />
                         </div>
                     </div>
