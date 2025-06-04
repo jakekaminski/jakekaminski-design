@@ -55,10 +55,9 @@ export function HomeHero() {
                                 Digital marketing that costs less and does more.
                             </h1>
                             <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                                I'm Jake, a designer & web developer from
-                                Central Illinois. I specialize in digital
-                                marketing that is beautiful, painless, and
-                                cost-effective.
+                                I'm Jake, a web developer & designer from the
+                                Midwest. I specialize in digital marketing that
+                                is beautiful, painless, and cost-effective.
                             </p>
                             <div className="mt-10 flex items-center justify-center gap-x-6">
                                 <a

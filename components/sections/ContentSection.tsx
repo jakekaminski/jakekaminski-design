@@ -43,10 +43,9 @@ export function ContentSection() {
                                     well, a <i>template</i>. Maybe you dread
                                     posting on social media, because "National
                                     Cheese Lovers' Day" just isn't cutting it
-                                    anymore (pun-intended). And on top of all
-                                    that, marketing is starting to eat up{' '}
-                                    <i>more and more</i> of your budget each
-                                    month.
+                                    anymore. And on top of all that, marketing
+                                    is starting to eat up <i>more and more</i>{' '}
+                                    of your budget each month.
                                 </p>
                                 <p className="mt-8">
                                     You sit back and wonder, "Wasn't this thing

@@ -6,12 +6,16 @@ export async function getProjects() {
         list: await getPageMap('/projects'),
         route: '/projects',
     })
-    return directories
+    const projects = directories
         .filter((project) => project.name !== 'index')
-        .sort(
-            (a, b) =>
-                +new Date(b.frontMatter.date) - +new Date(a.frontMatter.date)
-        )
+        .toSorted((a, b) => {
+            if (!!a.frontMatter.featured && !b.frontMatter.featured) return -1
+            if (!a.frontMatter.featured && !!b.frontMatter.featured) return 1
+            // If both are featured or both are not, sort by date descending
+            return +new Date(b.frontMatter.date) - +new Date(a.frontMatter.date)
+        })
+
+    return projects
 }
 
 export async function getTags() {

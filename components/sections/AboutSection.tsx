@@ -18,8 +18,8 @@ export function AboutSection() {
                                 Though my career started in software, from the
                                 moment I launched my first marketing website, I
                                 was hooked. Now I help businesses make sense of
-                                the mess of digital marketing, from A/B testing
-                                to z-indexing.
+                                the mess of digital marketing, from A/B tests to
+                                z-index.
                             </p>
                             <div className="mt-10 flex items-center gap-x-6">
                                 <a
