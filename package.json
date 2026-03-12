@@ -10,7 +10,10 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@heroicons/react": "^2.2.0",
+    "@marsidev/react-turnstile": "^1.4.2",
     "@tailwindcss/postcss": "^4.0.9",
+    "@upstash/ratelimit": "^2.0.8",
+    "@upstash/redis": "^1.37.0",
     "next": "15.2.8",
     "nextra": "^4.2.13",
     "nextra-theme-blog": "^4.2.13",

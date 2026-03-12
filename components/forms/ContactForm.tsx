@@ -1,12 +1,14 @@
 'use client'
 import { submitForm } from '@/app/actions'
-import { useActionState } from 'react'
+import { Turnstile } from '@marsidev/react-turnstile'
+import { useActionState, useState } from 'react'
 import { AlertSuccess, SubmitButton } from '../ui'
 
 export function ContactForm() {
     const [formState, action] = useActionState(submitForm, {
         message: '',
     })
+    const [turnstileToken, setTurnstileToken] = useState('')
 
     return (
         <form
@@ -123,7 +125,18 @@ export function ContactForm() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-8 flex justify-end">
+                <div className="mt-8">
+                    <Turnstile
+                        siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                        onSuccess={(token) => setTurnstileToken(token)}
+                    />
+                    <input
+                        type="hidden"
+                        name="cf-turnstile-response"
+                        value={turnstileToken}
+                    />
+                </div>
+                <div className="mt-4 flex justify-end">
                     <SubmitButton label="Send message" />
                 </div>
                 {formState?.message && (
