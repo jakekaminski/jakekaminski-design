@@ -1,5 +1,4 @@
 import { ClassName } from '@/utils'
-import { ImageZoom } from 'nextra/components'
 
 export type GalleryGridProps = {
     images: {
@@ -23,21 +22,21 @@ export function GalleryGrid({ images, className }: GalleryGridProps) {
                         className={`relative ${image.colSpan ?? `lg:row-span-1`} ${image.rowSpan ?? `lg:row-span-1`}`}
                     >
                         <div
-                            className={`relative flex flex-col overflow-hidden rounded-[calc(var(--radius-lg)+1px)] ${image.mobileMockup ? `h-full` : `h-auto`}`}
+                            className={`relative flex flex-col overflow-hidden rounded-lg border border-slate-700 ${image.mobileMockup ? `h-full` : `h-auto`}`}
                         >
                             {image.mobileMockup ? (
                                 <div className="@container relative grow max-lg:mx-auto max-lg:max-w-sm">
-                                    <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-                                        <ImageZoom
-                                            className="not-prose size-full object-cover object-top"
+                                    <div className="absolute inset-x-10 top-10 bottom-0 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-slate-700 bg-slate-900 shadow-2xl">
+                                        <img
+                                            className="size-full object-cover object-top"
                                             src={image.src}
                                             alt={image.alt}
                                         />
                                     </div>
                                 </div>
                             ) : (
-                                <ImageZoom
-                                    className="not-prose size-full object-contain"
+                                <img
+                                    className="size-full object-contain"
                                     src={image.src}
                                     alt={image.alt}
                                 />

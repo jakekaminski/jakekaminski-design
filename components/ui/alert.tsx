@@ -1,5 +1,4 @@
 import { ClassName } from '@/utils'
-import { CheckCircleIcon } from '@heroicons/react/20/solid'
 
 export function AlertSuccess({
     message,
@@ -7,20 +6,17 @@ export function AlertSuccess({
 }: { message?: string } & ClassName) {
     return (
         <div
-            className={`rounded-md border border-green-300 bg-green-50 p-4 ${className}`}
+            className={`rounded border border-cyan-700/50 p-4 ${className ?? ''}`}
+            style={{ backgroundColor: 'rgba(6, 182, 212, 0.08)' }}
         >
-            <div className="flex">
-                <div className="shrink-0">
-                    <CheckCircleIcon
-                        aria-hidden="true"
-                        className="size-5 text-green-400"
-                    />
-                </div>
-                <div className="ml-3">
-                    <p className="text-sm font-medium text-green-800">
-                        {message}
-                    </p>
-                </div>
+            <div className="flex items-start gap-3">
+                <span className="text-cyan-400">✓</span>
+                <p
+                    className="text-sm text-cyan-300"
+                    style={{ fontFamily: 'var(--font-body)' }}
+                >
+                    {message}
+                </p>
             </div>
         </div>
     )

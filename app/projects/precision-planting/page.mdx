@@ -1,211 +1,125 @@
 ---
-title: Precision Planting
-description:
-    Website redesign, development, and design system for an agtech leader.
+title: Precision Planting — Website Rebuild
+description: Full website rebuild for an agtech leader — from legacy templates to a modern Next.js + Chakra UI stack with a headless CMS and comprehensive design system.
 thumbnail: /images/prp-thumbnail.png
-tags: [web, design, development]
+tags: [Next.js, Chakra UI, Headless CMS, Design System]
 date: 2024-03-02
 featured: true
 ---
 
-import { Callout } from 'nextra/components'
-import { GalleryGrid, ImageWithCaption } from '@/components'
+import { Callout, ImageWithCaption } from '@/components'
+import { GalleryGrid } from '@/components'
 
 ## Overview
 
-When I first started designing for Precision Planting's marketing team in 2022,
-they already had a strong brand and a loyal customer base. However, their
-existing website's design wasn't able to keep up with new content and the
-growing number of products they offered. They were also going through a full
-rebrand, and needed a design overhaul to match their new brand identity.
+Precision Planting's marketing team had a problem: their website couldn't keep
+pace with a growing product line or a full brand overhaul. The existing setup was
+a collection of legacy templates that made adding new products and content slow
+and painful. They needed a complete rebuild — new architecture, new design
+system, and a CMS that wouldn't require a developer to update a product page.
 
 <ImageWithCaption
     src="/images/prp-legacy-homepage.png"
     alt="Precision Planting's old website homepage"
-    caption="Precision Planting's previous website homepage."
+    caption="The previous site — templates stretched well past their limits."
 />
 
-{/* prettier-ignore-start */}
-
 <Callout emoji="🎯">
-  **Goal:** create a new website design that could
-    - _Showcase_ Precision Planting's new branding
-    - _Scale_ with their growing product line
-    - _Support_ the design on other digital channels.
+  **Goal:** Build a website that could scale with the brand's product growth, match the new visual identity, and give the marketing team CMS-level control over all content.
 </Callout>
-
-{/* prettier-ignore-end */}
 
 ## My Role
 
-I was hired as a designer & developer to help the marketing team overhaul their
-website. Some of my responsibilities included:
+Hired as designer and developer to lead the rebuild from concept to launch:
 
-- **🧪 User research**: conducting interviews with customers and dealers to
-  understand their needs and pain points.
-- **💅 Design system**: creating a comprehensive digital design system of
-  styles, components, and page templates in Figma and tested in Storybook.
-- **👾 Development**: building the new site with Next.js and Chakra UI.
-- **✏️ Content Management**: migrating to Kontent.ai headless CMS.
+- **Design system**: full token system (color, type, spacing, motion) in Figma, validated in Storybook
+- **Component library**: built in Next.js + Chakra UI, tested in Storybook with >90% coverage
+- **CMS migration**: moved all content to Kontent.ai headless CMS — new pages went from weeks to hours
+- **User research**: card sorting with customers and dealers to inform IA and product taxonomy
 
 ## Process
 
-### User Research
+### Architecture decisions
 
-The biggest pain point Precision Planting was facing was that they were no
-longer a _"Planting"_-only brand. As of 2022, they offered a full suite of
-products compatible with equipment used year-round. This was a significant shift
-in their business model, and their website needed to reflect that.
-
-<ImageWithCaption
-    src="/images/prp-legacy-products.gif"
-    alt="Precision Planting old all products page"
-    caption="Precision's previous product page was one looooooong list."
-/>
-
-To find the best way to present this, I did card sorting with customer and
-dealers to understand how they grouped products in their minds.
-
-<ImageWithCaption
-    src="/images/prp-card-sorting.png"
-    alt="Card sorting with Precision Planting products"
-    caption="Card sorting with customers and dealers to understand how they grouped products"
-/>
-
-<Callout>
-    **Takeaway:** Customers and dealers grouped products first by _equipment_
-    compatibility, then specific use-case categories.
-</Callout>
-
-### Design
-
-With the new brand identity and the results of the user research in mind, I
-started designing the new website. I created a comprehensive digital design
-system that included:
-
-- **Styles**: colors, typography, spacing, and other design tokens.
-- **Components**: buttons, forms, cards, and other UI elements.
-- **Templates**: page layouts and content structures.
-- **Patterns**: design patterns for common use cases.
+The key call was choosing **Next.js + Chakra UI** over a CMS-native builder. The
+marketing team needed design flexibility and the dev team needed a maintainable
+component model. A headless approach (Next.js frontend + Kontent.ai CMS) gave
+both: content editors got a clean, structured authoring experience; developers
+got a typed content model with predictable schema.
 
 <ImageWithCaption
     src="/images/prp-design-system.png"
     alt="Precision Planting design system"
-    caption="Precision Planting's new design system."
+    caption="Design token system — colors, type scales, spacing, and component variants."
 />
 
-As with most design projects, this one went through several iterations. Initial
-designs were conservative and didn't depart much from the original brand. But as
-Precision's internal rebrand finalized, I started making bolder decisions with
-key page elements—particularly hero sections and CTAs.
+### User research first
+
+The old IA assumed Precision was a planting-only brand. By 2022, that was no
+longer true — they covered seeding, soil sampling, and harvest. I ran card
+sorting sessions with customers and dealers to understand how they mentally
+grouped products before designing the nav and product taxonomy.
+
+<Callout>
+  **Finding:** Users grouped products by equipment compatibility first, then by use case — not by brand sub-line. This drove the entire IA rebuild.
+</Callout>
+
+<ImageWithCaption
+    src="/images/prp-card-sorting.png"
+    alt="Card sorting session results"
+    caption="Card sorting revealed the right product hierarchy — equipment-first, not brand-first."
+/>
+
+### Design system build
+
+I started with the high-visibility keystone components (hero sections, CTAs,
+product cards) rather than trying to build a complete atomic system upfront.
+Getting those right created a strong reference point for every downstream
+component decision.
 
 <ImageWithCaption
     src="/images/prp-hero-and-cta.png"
-    alt="Precision Planting hero sections and CTAs"
-    caption="The new hero sections and CTAs have a bolder, high-contrast look."
+    alt="New hero sections and CTAs"
+    caption="High-contrast hero + CTA patterns anchored the rest of the design system."
 />
 
-It was much easier to make decisions and get better feedback on the design's
-"atomic" elements once I had these keystone components in place. I could test
-everything in context of the most prominent page elements. Nailing down the rest
-of the design system was a breeze from there.
+### Storybook + headless CMS = fast shipping
 
-<ImageWithCaption
-    src="/images/prp-buttons-and-links.png"
-    alt="Precision Planting button and link designs"
-    caption="Buttons and links were designed to fit into primary page elements."
-/>
-
-<Callout>
-    **Takeaway:** Sometimes it pays to start with big elements first and work
-    your way down, rather than try to first build out a robust atomic system.
-</Callout>
-
-### Development
-
-Once the design system was in place, I started building the new website. I used
-Next.js and Chakra UI to create a fast, responsive, and accessible site. I also
-migrated the content to Kontent.ai, a headless CMS that allowed Precision to
-manage content in a more flexible and scalable way.
-
-All UI components were developed and tested in Storybook, which made frontend
-development incredibly fast and easy. Also, using a headless CMS meant that
-creating new features and widgets in the CMS took _minutes_ instead of months.
+Every component was developed and documented in Storybook before touching any
+real page. With a typed Kontent.ai content model, adding new widgets to the CMS
+took minutes instead of sprint cycles.
 
 <ImageWithCaption
     src="/images/prp-storybook.png"
-    alt="Precision Planting Storybook"
-    caption="Precision Planting's Storybook with the new design system components."
+    alt="Storybook component library"
+    caption="Storybook became the source of truth for component state and documentation."
 />
 
-<Callout>
-    **Takeaway:** Using a headless CMS and Storybook made development much
-    faster and easier. It's also allowed Precision to manage content in a more
-    flexible and scalable way.
-</Callout>
+## Outcome
 
-## Results
+Launched in late 2023. First 90 days:
 
-The new website was launched in late 2023, and the response has been
-overwhelmingly positive. Some of the key results in the first three months
-include:
-
-- **🚦 Increased traffic**: The new website has seen a 58% increase in new users
-  launch and 57% increase in pageviews.
-- **👋 Improved engagement**: Bounce rate has decreased by 9% and tracked events
-  (clicks, form submissions, etc.) have increased by 46%.
-- **🏎️ Better performance**: The site speed and accessibility scores have
-  improved significantly, with a Lighthouse score of 100% in all categories.
-- **💻 Efficient development**: The new design system and headless CMS have made
-  development much faster and easier, allowing Precision to launch new features
-  and content in a matter of days versus months.
+- **+58% new users**, **+57% pageviews**
+- **-9% bounce rate**, **+46% tracked events** (clicks, form submissions)
+- **Lighthouse 100** across Performance, Accessibility, Best Practices, and SEO
+- New content and features shipped in days, not months
 
 <ImageWithCaption
     src="/images/prp-google-analytics.png"
-    alt="Precision Planting Google analytics"
-    caption="Metrics improved across the board in the first three months following launch."
+    alt="GA metrics post-launch"
+    caption="Across-the-board improvement in the first three months after launch."
 />
-
-<ImageWithCaption
-    src="/images/prp-vercel-analytics.png"
-    alt="Precision Planting Vercel speed insights"
-    caption="Site speed and accessibility scores improved significantly."
-/>
-
-<Callout emoji="🎉">
-    You can see Precision's live site at https://precisionplanting.com
-</Callout>
 
 <div className="ml-[calc(-50vw+50%)] w-screen">
     <GalleryGrid
         className="grid-rows-3"
         images={[
-            {
-                src: '/images/prp-new-homepage.png',
-                alt: 'Precision Planting new homepage',
-            },
-            {
-                src: '/images/prp-new-products-page.png',
-                alt: 'Precision Planting new products page',
-                mobileMockup: true,
-            },
-            {
-                src: '/images/prp-new-resources-page.png',
-                alt: 'Precision Planting new resources page',
-            },
-            {
-                src: '/images/prp-new-dealer-locator.png',
-                alt: 'Precision Planting new dealer locator',
-            },
-            {
-                src: '/images/prp-new-product-page.png',
-                alt: 'Precision Planting new product page',
-            },
-            {
-                src: '/images/prp-new-careers-page.png',
-                alt: 'Precision Planting new careers page',
-            },
+            { src: '/images/prp-new-homepage.png', alt: 'New homepage' },
+            { src: '/images/prp-new-products-page.png', alt: 'New products page', mobileMockup: true },
+            { src: '/images/prp-new-resources-page.png', alt: 'New resources page' },
+            { src: '/images/prp-new-dealer-locator.png', alt: 'New dealer locator' },
+            { src: '/images/prp-new-product-page.png', alt: 'New product page' },
+            { src: '/images/prp-new-careers-page.png', alt: 'New careers page' },
         ]}
     />
-
 </div>

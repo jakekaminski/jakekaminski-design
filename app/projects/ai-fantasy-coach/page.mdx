@@ -1,0 +1,112 @@
+---
+title: AI Fantasy Coach
+description: AI-powered ESPN fantasy football dashboard. Live league data, OpenAI coaching briefings, start/sit optimization, win probability analysis, waiver wire picks, playoff simulations, and season projections.
+thumbnail: /images/ai-fantasy-coach-thumbnail.png
+tags: [Next.js, OpenAI, ESPN API, shadcn/ui, Recharts, TypeScript]
+date: 2025-08-01
+featured: true
+liveUrl: https://ai-fantasy-coach.vercel.app
+github: https://github.com/jakekaminski/ai-fantasy-coach
+---
+
+import { Callout } from '@/components'
+
+## Overview
+
+AI Fantasy Coach is a full-stack dashboard that connects to the ESPN Fantasy
+API, pulls live league data, and runs it through OpenAI to generate actionable
+weekly coaching intelligence. The result: start/sit decisions, waiver wire
+picks, win probability charts, and playoff simulations — all personalized to
+your actual roster and matchup.
+
+This started as a personal tool to stop making gut-feel lineup decisions and
+turned into a production app on Vercel.
+
+**Live:** [ai-fantasy-coach.vercel.app](https://ai-fantasy-coach.vercel.app)  
+**GitHub:** [github.com/jakekaminski/ai-fantasy-coach](https://github.com/jakekaminski/ai-fantasy-coach)
+
+## Stack
+
+- **Framework:** Next.js 15 (Turbopack), React 19
+- **UI:** shadcn/ui, Radix primitives, Tailwind CSS v4
+- **AI:** OpenAI SDK (GPT-4o) — streaming responses
+- **Data viz:** Recharts — win probability curves, projection charts
+- **Tables:** TanStack Table — sortable roster/waiver views
+- **DnD:** dnd-kit — drag-and-drop lineup builder
+- **Validation:** Zod — typed ESPN API response schemas
+- **Deployment:** Vercel
+
+## Features
+
+### ESPN Fantasy API integration
+
+Connects to ESPN's unofficial fantasy API to pull live league data: rosters,
+matchups, transactions, standings, and player projections. All ESPN API
+responses are validated with Zod schemas to catch shape changes early.
+
+### AI Coach Briefing
+
+Every week, OpenAI generates a coaching briefing for your matchup — summarizing
+your roster strengths, your opponent's threats, and a recommended game plan.
+A risk tolerance slider adjusts the briefing from conservative (protect your
+lead, start proven players) to aggressive (take the ceiling swing).
+
+Briefings are streamed via the OpenAI streaming API so you get content
+progressively rather than waiting for the full response.
+
+<Callout emoji="🤖">
+  The briefing prompt includes full roster data, injury reports, recent performance trends, and historical head-to-head data — giving the model context that most tools ignore.
+</Callout>
+
+### Start/Sit Optimizer
+
+Presents your flex decisions as a comparison view — AI score projection,
+recent form, injury status, and a recommendation with reasoning. Built on
+TanStack Table with sortable columns so you can slice the data however you want.
+
+### Win Probability & Season Projections
+
+Recharts-powered visualizations:
+- **Win probability curve** — updates as the week's real scores come in
+- **Season projection chart** — playoff probability trending across the season
+- **Points-for vs. points-against** scatter plot across the league
+
+### Waiver Wire Intelligence
+
+Given your roster holes (identified by OpenAI from your lineup submission
+history), the waiver analysis surfaces pickups ranked by impact — not just
+by raw points projection.
+
+### Playoff Simulator
+
+Monte Carlo-style bracket simulation running 10,000 season iterations to
+generate playoff probability percentages for every team in the league.
+Rendered as a visual bracket with probability overlays.
+
+### Mobile-first responsive design
+
+Bottom nav on mobile for thumb-reachable access to the key weekly views:
+Lineup, Briefing, Waiver Wire, and Standings. Desktop expands to a full
+sidebar layout.
+
+## Architecture notes
+
+**Why Next.js App Router?**  
+Server components made sense for the data-heavy views — roster tables and
+standings render server-side, reducing client bundle size and avoiding
+waterfall fetches.
+
+**Why not a dedicated fantasy data provider?**  
+ESPN's API is free and covers all the data points needed. The tradeoff is
+instability (it's unofficial), which is why every response shape is validated
+with Zod. When ESPN changes something, the app fails fast with a clear error
+rather than silently displaying wrong data.
+
+**Streaming AI responses**  
+The coaching briefing uses OpenAI's streaming API via Next.js route handlers.
+The frontend uses `ReadableStream` to progressively render the briefing as it
+arrives — same pattern as ChatGPT's typewriter effect.
+
+<Callout emoji="⚡">
+  The full weekly briefing (roster analysis + matchup breakdown + game plan) typically completes in under 8 seconds on GPT-4o — fast enough that streaming feels natural rather than necessary.
+</Callout>

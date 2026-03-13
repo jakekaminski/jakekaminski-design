@@ -1,11 +1,8 @@
-import { ImageZoom } from 'nextra/components'
-
 export function ImageWithCaption({
     src,
     alt,
     className = '',
     caption,
-    lightbox = true,
 }: {
     src: string
     alt: string
@@ -17,20 +14,16 @@ export function ImageWithCaption({
 }) {
     return (
         <figure className="size-full">
-            {lightbox ? (
-                <ImageZoom
-                    src={src}
-                    alt={alt}
-                    className={`rounded-md border border-gray-200 ${className}`}
-                />
-            ) : (
-                <img
-                    src={src}
-                    alt={alt}
-                    className={`rounded-md border border-gray-200 ${className}`}
-                />
+            <img
+                src={src}
+                alt={alt}
+                className={`w-full rounded-md border border-slate-700 ${className}`}
+            />
+            {caption && (
+                <figcaption className="mt-2 text-center text-sm text-slate-400">
+                    {caption}
+                </figcaption>
             )}
-            <figcaption className="text-center">{caption}</figcaption>
         </figure>
     )
 }

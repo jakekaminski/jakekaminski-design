@@ -1,6 +1,5 @@
 'use client'
 
-import { ArrowPathIcon } from '@heroicons/react/16/solid'
 import { useFormStatus } from 'react-dom'
 
 export function SubmitButton({ label }: { label?: string }) {
@@ -10,10 +9,20 @@ export function SubmitButton({ label }: { label?: string }) {
         <button
             disabled={pending}
             type="submit"
-            className="inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded-md bg-emerald-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600 disabled:pointer-events-none disabled:cursor-progress disabled:bg-gray-400 disabled:text-gray-600"
+            className="pixel-border-amber inline-flex h-10 cursor-pointer items-center justify-center gap-2 rounded px-5 py-2.5 text-xs text-amber-400 transition-all hover:bg-amber-400/10 disabled:pointer-events-none disabled:cursor-progress disabled:opacity-50"
+            style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.5' }}
         >
-            {label ?? 'Submit'}
-            {pending && <ArrowPathIcon className="size-4 animate-spin" />}
+            {pending ? (
+                <>
+                    <span>Sending...</span>
+                    <svg className="size-3 animate-spin" viewBox="0 0 24 24" fill="none">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                    </svg>
+                </>
+            ) : (
+                label ?? 'Submit'
+            )}
         </button>
     )
 }
