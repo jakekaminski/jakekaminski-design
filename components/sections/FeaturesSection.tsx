@@ -7,6 +7,8 @@ const skills = [
         borderColor: 'border-amber-600/40',
         glowColor: 'rgba(245, 158, 11, 0.08)',
         accentColor: '#f59e0b',
+        progress: 95,
+        progressLabel: 'ATK',
     },
     {
         emoji: '🛡️',
@@ -16,6 +18,8 @@ const skills = [
         borderColor: 'border-purple-600/40',
         glowColor: 'rgba(108, 52, 131, 0.1)',
         accentColor: '#6c3483',
+        progress: 88,
+        progressLabel: 'DEF',
     },
     {
         emoji: '🧪',
@@ -25,6 +29,8 @@ const skills = [
         borderColor: 'border-cyan-600/40',
         glowColor: 'rgba(6, 182, 212, 0.08)',
         accentColor: '#06b6d4',
+        progress: 85,
+        progressLabel: 'MAG',
     },
 ]
 
@@ -93,11 +99,47 @@ export function FeaturesSection() {
                                 {skill.name}
                             </h3>
                             <p
-                                className="leading-relaxed text-slate-400"
+                                className="mb-5 leading-relaxed text-slate-400"
                                 style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem' }}
                             >
                                 {skill.description}
                             </p>
+
+                            {/* Game progress bar */}
+                            <div>
+                                <div className="mb-1.5 flex items-center justify-between">
+                                    <span
+                                        style={{
+                                            fontFamily: 'var(--font-heading)',
+                                            fontSize: '0.5rem',
+                                            color: skill.accentColor,
+                                            lineHeight: '1.8',
+                                        }}
+                                    >
+                                        {skill.progressLabel}
+                                    </span>
+                                    <span
+                                        style={{
+                                            fontFamily: 'var(--font-heading)',
+                                            fontSize: '0.5rem',
+                                            color: skill.accentColor,
+                                            lineHeight: '1.8',
+                                        }}
+                                    >
+                                        {skill.progress}/100
+                                    </span>
+                                </div>
+                                <div className="h-3 rounded-sm bg-slate-800/80" style={{ border: `1px solid ${skill.accentColor}40` }}>
+                                    <div
+                                        className="h-full rounded-sm transition-all"
+                                        style={{
+                                            width: `${skill.progress}%`,
+                                            backgroundColor: skill.accentColor,
+                                            boxShadow: `0 0 8px ${skill.accentColor}80`,
+                                        }}
+                                    />
+                                </div>
+                            </div>
                         </div>
                     ))}
                 </div>

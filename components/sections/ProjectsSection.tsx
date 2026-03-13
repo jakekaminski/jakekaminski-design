@@ -58,6 +58,36 @@ export async function ProjectsSection() {
                                             { dateStyle: 'medium' }
                                         )}
                                     </time>
+                                    {/* Quest status badge */}
+                                    {project.frontMatter.liveUrl ? (
+                                        <span
+                                            className="rounded-sm px-1.5 py-0.5"
+                                            style={{
+                                                fontFamily: 'var(--font-heading)',
+                                                fontSize: '0.5rem',
+                                                lineHeight: '1.8',
+                                                backgroundColor: 'rgba(6, 182, 212, 0.12)',
+                                                color: '#06b6d4',
+                                                border: '1px solid rgba(6, 182, 212, 0.3)',
+                                            }}
+                                        >
+                                            ● ACTIVE
+                                        </span>
+                                    ) : (
+                                        <span
+                                            className="rounded-sm px-1.5 py-0.5"
+                                            style={{
+                                                fontFamily: 'var(--font-heading)',
+                                                fontSize: '0.5rem',
+                                                lineHeight: '1.8',
+                                                backgroundColor: 'rgba(74, 26, 138, 0.15)',
+                                                color: '#9490b0',
+                                                border: '1px solid rgba(74, 26, 138, 0.3)',
+                                            }}
+                                        >
+                                            ✓ DONE
+                                        </span>
+                                    )}
                                     {project.frontMatter.featured && (
                                         <span
                                             className="rounded-sm px-1.5 py-0.5 text-xs"

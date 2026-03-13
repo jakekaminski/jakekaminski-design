@@ -1,7 +1,9 @@
 import {
     AboutSection,
+    CharacterSheetSection,
     ContactSection,
     ContentSection,
+    DialogueSection,
     FeaturesSection,
     HomeHero,
     ProjectsSection,
@@ -11,7 +13,9 @@ export default function HomePage() {
     return (
         <>
             <HomeHero />
+            <DialogueSection />
             <AboutSection />
+            <CharacterSheetSection />
             <FeaturesSection />
             <ProjectsSection />
             <ContentSection />
