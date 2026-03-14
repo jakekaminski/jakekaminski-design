@@ -1,40 +1,40 @@
 import { Header } from '@/components'
-import { Karla, Young_Serif } from 'next/font/google'
-import { Head } from 'nextra/components'
-import { getPageMap } from 'nextra/page-map'
+import { JetBrains_Mono, Press_Start_2P } from 'next/font/google'
 import { PropsWithChildren } from 'react'
 import './app.css'
 
 export const metadata = {
-    title: 'Jake Kaminski • Website Marketing',
+    title: 'Jake Kaminski • Web Developer & Code Wizard',
     description:
-        "I'm a web designer & developer from Central Illinois. I specialize in making websites that are beautiful, painless, and cost-effective.",
-    image: 'public/images/headshot.jpg',
+        "Full-stack web developer from the Midwest. I craft web experiences with Next.js, React, and TypeScript — one quest at a time.",
+    image: '/images/headshot.jpg',
 }
 
-export const youngSerif = Young_Serif({
+export const pressStart2P = Press_Start_2P({
     subsets: ['latin'],
     variable: '--font-heading',
     weight: '400',
+    display: 'swap',
 })
 
-export const karla = Karla({
+export const jetBrainsMono = JetBrains_Mono({
     subsets: ['latin'],
     variable: '--font-body',
-    weight: ['200', '400', '600', '800'],
+    weight: ['300', '400', '500', '700'],
+    display: 'swap',
 })
 
-export default async function RootLayout({ children }: PropsWithChildren) {
+export default function RootLayout({ children }: PropsWithChildren) {
     return (
         <html
             lang="en"
-            suppressHydrationWarning
-            className={`${youngSerif.variable} ${karla.variable} font-body scroll-smooth`}
+            className={`${pressStart2P.variable} ${jetBrainsMono.variable} font-body scroll-smooth`}
         >
-            <Head backgroundColor={{ dark: '#ffffff', light: '#ffffff' }} />
-            <body className="max-w-screen overflow-x-hidden">
-                {' '}
-                <Header pageMap={await getPageMap()} />
+            <body
+                className="max-w-screen overflow-x-hidden"
+                style={{ backgroundColor: '#0a0a14', color: '#e8e6f0' }}
+            >
+                <Header />
                 {children}
             </body>
         </html>

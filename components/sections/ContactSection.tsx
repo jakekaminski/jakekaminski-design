@@ -1,112 +1,81 @@
-import {
-    EnvelopeIcon,
-    HomeModernIcon,
-    PhoneIcon,
-} from '@heroicons/react/24/outline'
 import { ContactForm } from '../forms'
 
 export function ContactSection() {
     return (
         <section
             id="contact"
-            className="relative isolate overflow-x-hidden bg-white"
+            className="relative isolate overflow-x-hidden py-24 sm:py-32"
+            style={{ backgroundColor: '#0f0e1a' }}
         >
-            <div className="mx-auto grid max-w-7xl grid-cols-1">
-                <div className="relative grid grid-cols-1 gap-6 px-6 pt-24 pb-20 sm:pt-32 lg:static lg:grid-cols-2 lg:gap-10 lg:px-8 lg:py-48">
-                    <div className="mx-auto flex max-w-xl flex-col justify-center lg:mx-0 lg:max-w-lg">
-                        <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10">
-                            <svg
-                                className="absolute inset-0 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-                                aria-hidden="true"
-                            >
-                                <defs>
-                                    <pattern
-                                        id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
-                                        width={200}
-                                        height={200}
-                                        x="100%"
-                                        y={-1}
-                                        patternUnits="userSpaceOnUse"
-                                    >
-                                        <path
-                                            d="M130 200V.5M.5 .5H200"
-                                            fill="none"
-                                        />
-                                    </pattern>
-                                </defs>
-                                <rect
-                                    width="100%"
-                                    height="100%"
-                                    strokeWidth={0}
-                                    fill="white"
-                                />
-                                <svg
-                                    x="100%"
-                                    y={-1}
-                                    className="overflow-visible fill-gray-50"
-                                >
-                                    <path
-                                        d="M-470.5 0h201v201h-201Z"
-                                        strokeWidth={0}
-                                    />
-                                </svg>
-                                <rect
-                                    width="100%"
-                                    height="100%"
-                                    strokeWidth={0}
-                                    fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
-                                />
-                            </svg>
-                        </div>
-                        <h2 className="font-heading text-3xl font-normal tracking-tight text-gray-900">
-                            Get in touch
-                        </h2>
-                        <p className="mt-6 text-lg leading-8 text-gray-600">
-                            Drop me a message and I'll put together a free
-                            estimate for your project. I'm always happy also to
-                            meet up over coffee and talk through your ideas in
-                            person!
+            {/* Background grid */}
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10"
+                style={{
+                    backgroundImage: `
+                        linear-gradient(rgba(74, 26, 138, 0.05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(74, 26, 138, 0.05) 1px, transparent 1px)
+                    `,
+                    backgroundSize: '32px 32px',
+                }}
+            />
+
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+                <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
+
+                    {/* Info column */}
+                    <div className="flex flex-col justify-center">
+                        <p
+                            className="mb-3 text-xs uppercase tracking-widest text-purple-400"
+                            style={{ fontFamily: 'var(--font-body)' }}
+                        >
+                            Start a Quest
                         </p>
-                        <dl className="mt-10 space-y-4 text-base leading-7 text-gray-600">
-                            <div className="flex gap-x-4">
-                                <dt className="flex-none">
-                                    <span className="sr-only">Address</span>
-                                    <HomeModernIcon
-                                        className="h-7 w-6 text-gray-400"
-                                        aria-hidden="true"
-                                    />
-                                </dt>
-                                <dd>Normal, Illinois</dd>
+                        <h2
+                            className="mb-6 leading-loose text-slate-100"
+                            style={{
+                                fontFamily: 'var(--font-heading)',
+                                fontSize: 'clamp(0.85rem, 2vw, 1.2rem)',
+                            }}
+                        >
+                            Send a Raven
+                        </h2>
+                        <p
+                            className="mb-10 leading-relaxed text-slate-400"
+                            style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem' }}
+                        >
+                            Got a quest in mind? Drop me a message and I&apos;ll scope it out —
+                            free of charge. I&apos;m always happy to meet up over coffee (or mead)
+                            and talk through your ideas.
+                        </p>
+
+                        <dl className="space-y-4">
+                            <div className="flex items-center gap-3">
+                                <span className="text-lg">🏰</span>
+                                <dd
+                                    className="text-slate-400"
+                                    style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem' }}
+                                >
+                                    Normal, Illinois
+                                </dd>
                             </div>
-                            <div className="flex gap-x-4">
-                                <dt className="flex-none">
-                                    <span className="sr-only">Telephone</span>
-                                    <PhoneIcon
-                                        className="h-7 w-6 text-gray-400"
-                                        aria-hidden="true"
-                                    />
-                                </dt>
-                                <dd>
+                            <div className="flex items-center gap-3">
+                                <span className="text-lg">📞</span>
+                                <dd style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem' }}>
                                     <a
-                                        className="hover:text-gray-900"
-                                        href="tel:+1 (555) 234-5678"
+                                        href="tel:+13098257568"
+                                        className="text-slate-400 transition-colors hover:text-cyan-400"
                                     >
                                         +1 (309) 825-7568
                                     </a>
                                 </dd>
                             </div>
-                            <div className="flex gap-x-4">
-                                <dt className="flex-none">
-                                    <span className="sr-only">Email</span>
-                                    <EnvelopeIcon
-                                        className="h-7 w-6 text-gray-400"
-                                        aria-hidden="true"
-                                    />
-                                </dt>
-                                <dd>
+                            <div className="flex items-center gap-3">
+                                <span className="text-lg">✉️</span>
+                                <dd style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem' }}>
                                     <a
-                                        className="hover:text-gray-900"
-                                        href="mailto:hello@example.com"
+                                        href="mailto:jacobakaminski@gmail.com"
+                                        className="text-slate-400 transition-colors hover:text-cyan-400"
                                     >
                                         jacobakaminski@gmail.com
                                     </a>
@@ -114,19 +83,9 @@ export function ContactSection() {
                             </div>
                         </dl>
                     </div>
-                    <div className="mx-auto w-full max-w-2xl">
-                        {/* <div className="relative h-[20rem] rounded-3xl bg-emerald-700 lg:h-[28rem]">
-                            <figure>
-                                <img
-                                    src="images/obi-wan.png"
-                                    alt="Obi-wan lying in the grass"
-                                    className="absolute bottom-0 h-[24rem] w-full rounded-3xl object-cover object-top lg:h-[34rem]"
-                                />
-                                <figcaption className="absolute inset-x-0 -bottom-10 text-center text-gray-600">
-                                    🐾 Dog tax
-                                </figcaption>
-                            </figure>
-                        </div> */}
+
+                    {/* Form column */}
+                    <div className="w-full">
                         <ContactForm />
                     </div>
                 </div>

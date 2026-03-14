@@ -1,91 +1,120 @@
+const pillars = [
+    {
+        icon: '⚔️',
+        label: 'Clear scope',
+        description: 'defined before a single line of code is written',
+        color: '#f59e0b',
+        barWidth: '100%',
+    },
+    {
+        icon: '🛡️',
+        label: 'Battle-tested architecture',
+        description: "that won't crumble under load",
+        color: '#6c3483',
+        barWidth: '80%',
+    },
+    {
+        icon: '🧪',
+        label: 'Iterative delivery',
+        description: 'so you see progress every sprint, not just at the end',
+        color: '#06b6d4',
+        barWidth: '90%',
+    },
+]
+
 export function ContentSection() {
     return (
         <section
-            id="how-it-works"
-            className="overflow-x-hidden bg-white py-24 sm:py-32"
+            id="approach"
+            className="overflow-x-hidden py-24 sm:py-32"
+            style={{ backgroundColor: '#0f0e1a' }}
         >
             <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-                    <div className="flex h-full items-center lg:pr-4">
-                        <div className="relative isolate">
-                            <img
-                                className="mx-auto h-full w-10/12 object-contain"
-                                src="images/illustration-macbook.png"
-                                alt="Laptop with swear symbol on it"
-                            />
+                <div className="mx-auto grid max-w-2xl grid-cols-1 items-start gap-x-12 gap-y-16 sm:gap-y-24 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+
+                    {/* Stat bars / pillars */}
+                    <div className="space-y-6">
+                        {pillars.map((pillar) => (
                             <div
-                                aria-hidden="true"
-                                className="absolute inset-x-0 top-0 -z-10 h-1/2 transform-gpu blur-2xl"
+                                key={pillar.label}
+                                className="rounded border border-slate-800 p-5"
+                                style={{ backgroundColor: '#12111f' }}
                             >
-                                <div
-                                    style={{
-                                        clipPath:
-                                            'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                                    }}
-                                    className="relative mx-auto h-[24rem] w-[32rem] bg-gradient-to-tr from-orange-600 to-amber-400 opacity-30"
-                                />
+                                <div className="mb-3 flex items-center gap-3">
+                                    <span className="text-xl">{pillar.icon}</span>
+                                    <div>
+                                        <p
+                                            className="leading-loose"
+                                            style={{
+                                                fontFamily: 'var(--font-heading)',
+                                                fontSize: '0.65rem',
+                                                color: pillar.color,
+                                            }}
+                                        >
+                                            {pillar.label}
+                                        </p>
+                                        <p
+                                            className="text-slate-400"
+                                            style={{ fontFamily: 'var(--font-body)', fontSize: '0.75rem' }}
+                                        >
+                                            {pillar.description}
+                                        </p>
+                                    </div>
+                                </div>
+                                {/* Pixel progress bar */}
+                                <div className="h-2 rounded-sm bg-slate-800">
+                                    <div
+                                        className="h-2 rounded-sm"
+                                        style={{
+                                            width: pillar.barWidth,
+                                            backgroundColor: pillar.color,
+                                            boxShadow: `0 0 8px ${pillar.color}80`,
+                                        }}
+                                    />
+                                </div>
                             </div>
-                        </div>
+                        ))}
                     </div>
+
+                    {/* Text column */}
                     <div>
-                        <div className="text-base leading-7 text-gray-700 lg:max-w-lg">
-                            <p className="text-base leading-7 font-semibold text-emerald-600">
-                                How It Works
+                        <p
+                            className="mb-3 text-xs uppercase tracking-widest text-purple-400"
+                            style={{ fontFamily: 'var(--font-body)' }}
+                        >
+                            Battle Plan
+                        </p>
+                        <h2
+                            className="mb-6 leading-loose text-slate-100"
+                            style={{
+                                fontFamily: 'var(--font-heading)',
+                                fontSize: 'clamp(0.8rem, 1.8vw, 1rem)',
+                            }}
+                        >
+                            Let&apos;s be honest. Most web projects don&apos;t fail because of bad code.
+                        </h2>
+                        <div
+                            className="space-y-4 leading-relaxed text-slate-400"
+                            style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem' }}
+                        >
+                            <p>
+                                They fail because nobody agreed on what to build. Requirements
+                                were a napkin sketch. The tech stack was chosen by hype, not fit.
+                                And by month three, everyone&apos;s lost in the fog of war.
                             </p>
-                            <h1 className="font-heading mt-2 text-3xl font-normal tracking-tight text-gray-900 sm:text-4xl">
-                                Let's face it. Digital marketing isn't what you
-                                dreamed it would be.
-                            </h1>
-                            <div className="max-w-xl">
-                                <p className="mt-6">
-                                    Maybe you've hacked your website template as
-                                    far as it can go, but it still looks like...
-                                    well, a <i>template</i>. Maybe you dread
-                                    posting on social media, because "National
-                                    Cheese Lovers' Day" just isn't cutting it
-                                    anymore. And on top of all that, marketing
-                                    is starting to eat up <i>more and more</i>{' '}
-                                    of your budget each month.
-                                </p>
-                                <p className="mt-8">
-                                    You sit back and wonder, "Wasn't this thing
-                                    supposed to be <b>making me money</b>?"
-                                </p>
-                                <p className="mt-8">
-                                    I've been there. After working in digital
-                                    marketing for over five years, I've also
-                                    been frustrated by how confusing and
-                                    misleading popular platforms can be. That's
-                                    why I started working with businesses to
-                                    help them make sense of the madness and
-                                    build digital marketing that works for them.
-                                </p>
-                                <p className="mt-8">
-                                    And it happens with a few key ingredients:{' '}
-                                    <b>
-                                        <u className="decoration-emerald-500 decoration-3 underline-offset-3">
-                                            proven designs
-                                        </u>{' '}
-                                        built on{' '}
-                                        <u className="decoration-amber-500 decoration-3 underline-offset-3">
-                                            painless platforms
-                                        </u>{' '}
-                                        with{' '}
-                                        <u className="decoration-blue-500 decoration-3 underline-offset-3">
-                                            cost-effective strategies
-                                        </u>
-                                        .
-                                    </b>
-                                </p>
-                            </div>
+                            <p>
+                                I&apos;ve been in those dungeons. After years of building web apps
+                                across agtech, SaaS, and startups, I&apos;ve learned that the real
+                                magic isn&apos;t in the framework — it&apos;s in the process.
+                            </p>
                         </div>
-                        <div className="mt-10 flex">
+                        <div className="mt-8">
                             <a
                                 href="#contact"
-                                className="text-base leading-7 font-semibold text-emerald-600 hover:text-emerald-700 hover:underline hover:underline-offset-2"
+                                className="text-xs text-amber-400 transition-colors hover:text-amber-300 hover:underline"
+                                style={{ fontFamily: 'var(--font-body)' }}
                             >
-                                Reach out today to get started{' '}
-                                <span aria-hidden="true">&rarr;</span>
+                                📜 Ready to start? Reach out today →
                             </a>
                         </div>
                     </div>

@@ -1,6 +1,144 @@
 @import 'tailwindcss';
 
 @theme {
-    --font-body: 'Karla, sans-serif';
-    --font-heading: '"Young Serif", serif';
+    --font-heading: 'Press Start 2P', monospace;
+    --font-body: 'JetBrains Mono', monospace;
+
+    /* Fantasy color palette */
+    --color-bg-primary: #0a0a14;
+    --color-bg-secondary: #0f0e1a;
+    --color-bg-card: #12111f;
+    --color-bg-card-hover: #1a1830;
+
+    --color-purple-deep: #1e0a3c;
+    --color-purple-mid: #4a1a8a;
+    --color-purple-bright: #6c3483;
+
+    --color-amber-glow: #f59e0b;
+    --color-amber-dim: #b45309;
+
+    --color-cyan-glow: #06b6d4;
+    --color-cyan-dim: #0891b2;
+
+    --color-text-primary: #e8e6f0;
+    --color-text-muted: #9490b0;
+    --color-border: #2d2a4a;
+    --color-border-bright: #4a456a;
+}
+
+/* Pixel border utility — used on cards/buttons */
+.pixel-border {
+    box-shadow:
+        0 0 0 2px var(--color-border),
+        4px 4px 0 0 var(--color-border);
+}
+
+.pixel-border-amber {
+    box-shadow:
+        0 0 0 2px var(--color-amber-glow),
+        4px 4px 0 0 var(--color-amber-dim);
+}
+
+.pixel-border-purple {
+    box-shadow:
+        0 0 0 2px var(--color-purple-mid),
+        4px 4px 0 0 var(--color-purple-deep);
+}
+
+/* Scanline overlay for retro vibe */
+.scanlines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.03) 2px,
+        rgba(0, 0, 0, 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Prose styles for project pages */
+.project-prose {
+    color: var(--color-text-primary);
+    font-family: var(--font-body);
+    line-height: 1.8;
+}
+
+.project-prose h1,
+.project-prose h2,
+.project-prose h3 {
+    font-family: var(--font-heading);
+    color: #e8e6f0;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.project-prose h1 {
+    font-size: 1.25rem;
+    color: var(--color-amber-glow);
+}
+
+.project-prose h2 {
+    font-size: 1rem;
+    color: var(--color-cyan-glow);
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+}
+
+.project-prose h3 {
+    font-size: 0.85rem;
+    color: #e8e6f0;
+}
+
+.project-prose p {
+    margin-bottom: 1.25rem;
+    color: #c8c4d8;
+    font-size: 0.9rem;
+}
+
+.project-prose ul,
+.project-prose ol {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+    color: #c8c4d8;
+    font-size: 0.9rem;
+}
+
+.project-prose li {
+    margin-bottom: 0.5rem;
+}
+
+.project-prose strong {
+    color: var(--color-amber-glow);
+}
+
+.project-prose em {
+    color: var(--color-cyan-glow);
+    font-style: italic;
+}
+
+.project-prose a {
+    color: var(--color-cyan-glow);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.project-prose a:hover {
+    color: var(--color-amber-glow);
+}
+
+.project-prose figure {
+    margin: 2rem 0;
+}
+
+.project-prose figcaption {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-align: center;
+    margin-top: 0.5rem;
 }

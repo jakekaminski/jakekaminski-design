@@ -1,5 +1,19 @@
-import nextra from 'nextra'
+import createMDX from '@next/mdx'
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
 
-const withNextra = nextra({})
+const withMDX = createMDX({
+    options: {
+        remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
+    },
+})
 
-export default withNextra({})
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+    pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
+}
+
+export default withMDX(nextConfig)

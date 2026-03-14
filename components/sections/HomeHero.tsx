@@ -1,93 +1,91 @@
 export function HomeHero() {
     return (
-        <section id="hero" className="bg-white">
-            <div className="relative isolate pt-14">
-                <svg
-                    aria-hidden="true"
-                    className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
-                >
-                    <defs>
-                        <pattern
-                            x="50%"
-                            y={-1}
-                            id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
-                            width={200}
-                            height={200}
-                            patternUnits="userSpaceOnUse"
-                        >
-                            <path d="M.5 200V.5H200" fill="none" />
-                        </pattern>
-                    </defs>
-                    <svg
-                        x="50%"
-                        y={-1}
-                        className="overflow-visible fill-gray-50"
-                    >
-                        <path
-                            d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-                            strokeWidth={0}
-                        />
-                    </svg>
-                    <rect
-                        fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"
-                        width="100%"
-                        height="100%"
-                        strokeWidth={0}
-                    />
-                </svg>
+        <section
+            id="hero"
+            className="relative isolate overflow-hidden"
+            style={{ backgroundColor: '#0a0a14', minHeight: '90vh' }}
+        >
+            {/* Background pixel grid pattern */}
+            <div
+                aria-hidden="true"
+                className="absolute inset-0 -z-10"
+                style={{
+                    backgroundImage: `
+                        linear-gradient(rgba(74, 26, 138, 0.07) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(74, 26, 138, 0.07) 1px, transparent 1px)
+                    `,
+                    backgroundSize: '32px 32px',
+                }}
+            />
+            {/* Glow orbs */}
+            <div
+                aria-hidden="true"
+                className="absolute top-1/4 left-1/4 -z-10 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+                style={{ background: 'radial-gradient(ellipse, rgba(74,26,138,0.25) 0%, transparent 70%)' }}
+            />
+            <div
+                aria-hidden="true"
+                className="absolute top-1/3 right-1/4 -z-10 h-80 w-80 translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+                style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.12) 0%, transparent 70%)' }}
+            />
+
+            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center px-6 py-32 text-center lg:px-8 lg:py-48">
+                {/* Badge */}
                 <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-x-hidden blur-3xl sm:-top-80"
+                    className="mb-8 inline-flex items-center gap-2 rounded border border-purple-700/40 px-4 py-2 text-purple-300"
+                    style={{
+                        backgroundColor: 'rgba(74, 26, 138, 0.2)',
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.75rem',
+                    }}
                 >
-                    <div
-                        style={{
-                            clipPath:
-                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                        }}
-                        className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-emerald-500 to-teal-600 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-                    />
+                    <span>⚔️</span>
+                    <span>Level 10 Web Developer — Central Illinois</span>
                 </div>
 
-                <div className="py-24 sm:py-32 lg:pb-40">
-                    <div className="mx-auto max-w-7xl px-6 lg:px-8">
-                        <div className="mx-auto max-w-2xl text-center">
-                            <h1 className="font-heading text-5xl font-normal tracking-tight text-balance text-gray-900 sm:text-7xl">
-                                Digital marketing that costs less and does more.
-                            </h1>
-                            <p className="mt-8 text-lg font-medium text-pretty text-gray-500 sm:text-xl/8">
-                                I'm Jake, a web developer & designer from the
-                                Midwest. I specialize in digital marketing that
-                                is beautiful, painless, and cost-effective.
-                            </p>
-                            <div className="mt-10 flex items-center justify-center gap-x-6">
-                                <a
-                                    href="#contact"
-                                    className="rounded-md bg-emerald-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
-                                >
-                                    Work with Jake
-                                </a>
-                                <a
-                                    href="#projects"
-                                    className="text-sm/6 font-semibold text-gray-900"
-                                >
-                                    Recent Projects{' '}
-                                    <span aria-hidden="true">→</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    aria-hidden="true"
-                    className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-x-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                {/* Headline */}
+                <h1
+                    className="mb-8 max-w-3xl text-balance leading-loose text-amber-400"
+                    style={{
+                        fontFamily: 'var(--font-heading)',
+                        fontSize: 'clamp(1rem, 3.5vw, 1.75rem)',
+                    }}
                 >
-                    <div
-                        style={{
-                            clipPath:
-                                'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)',
-                        }}
-                        className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-orange-600 to-amber-400 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-                    />
+                    I forge web apps from raw code and battle-tested frameworks.
+                </h1>
+
+                {/* Subtext */}
+                <p
+                    className="mb-12 max-w-xl text-balance leading-relaxed text-slate-400"
+                    style={{ fontFamily: 'var(--font-body)', fontSize: '0.9rem' }}
+                >
+                    I&apos;m Jake — a full-stack developer from the Midwest. I specialize
+                    in building fast, beautiful web experiences with React, Next.js, and
+                    TypeScript. Every project is a new quest.
+                </p>
+
+                {/* CTAs */}
+                <div className="flex flex-wrap items-center justify-center gap-4">
+                    <a
+                        href="#contact"
+                        className="pixel-border-amber inline-flex items-center gap-2 rounded px-6 py-3 text-xs text-amber-400 transition-all hover:bg-amber-400/10"
+                        style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.5' }}
+                    >
+                        🗡️ Start a Quest
+                    </a>
+                    <a
+                        href="#projects"
+                        className="inline-flex items-center gap-2 rounded border border-slate-700 px-6 py-3 text-xs text-slate-300 transition-all hover:border-slate-500 hover:text-slate-100"
+                        style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem' }}
+                    >
+                        📜 View Quest Log
+                    </a>
+                </div>
+
+                {/* Scroll indicator */}
+                <div className="mt-24 flex flex-col items-center gap-2 text-slate-600">
+                    <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.65rem' }}>scroll</span>
+                    <div className="h-8 w-px bg-gradient-to-b from-slate-600 to-transparent" />
                 </div>
             </div>
         </section>
