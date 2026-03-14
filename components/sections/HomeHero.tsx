@@ -40,7 +40,7 @@ export function HomeHero() {
                     }}
                 >
                     <span>⚔️</span>
-                    <span>Level 5 Web Developer — Central Illinois</span>
+                    <span>Level 10 Web Developer — Central Illinois</span>
                 </div>
 
                 {/* Headline */}
@@ -51,7 +51,7 @@ export function HomeHero() {
                         fontSize: 'clamp(1rem, 3.5vw, 1.75rem)',
                     }}
                 >
-                    I forge web apps from raw code and ancient frameworks.
+                    I forge web apps from raw code and battle-tested frameworks.
                 </h1>
 
                 {/* Subtext */}
