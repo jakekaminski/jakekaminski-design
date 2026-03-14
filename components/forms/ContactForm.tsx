@@ -84,7 +84,7 @@ export function ContactForm() {
                         className={inputClass}
                         defaultValue=""
                         required
-                        placeholder="Describe your quest..."
+                        placeholder="Tell me about your project..."
                     />
                 </div>
                 {/* Honeypot */}

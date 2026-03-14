@@ -29,7 +29,7 @@ export function ContactSection() {
                             className="mb-3 text-xs uppercase tracking-widest text-purple-400"
                             style={{ fontFamily: 'var(--font-body)' }}
                         >
-                            Start a Quest
+                            Get in Touch
                         </p>
                         <h2
                             className="mb-6 leading-loose text-slate-100"
@@ -38,15 +38,15 @@ export function ContactSection() {
                                 fontSize: 'clamp(0.85rem, 2vw, 1.2rem)',
                             }}
                         >
-                            Send a Raven
+                            Got a Project?
                         </h2>
                         <p
                             className="mb-10 leading-relaxed text-slate-400"
                             style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem' }}
                         >
-                            Got a quest in mind? Drop me a message and I&apos;ll scope it out —
-                            free of charge. I&apos;m always happy to meet up over coffee (or mead)
-                            and talk through your ideas.
+                            Got a project in mind? Drop me a message and I&apos;ll scope it out —
+                            free of charge. I&apos;m always happy to meet up over coffee and
+                            talk through your ideas.
                         </p>
 
                         <dl className="space-y-4">

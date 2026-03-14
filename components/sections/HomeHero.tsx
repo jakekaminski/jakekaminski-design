@@ -71,7 +71,7 @@ export function HomeHero() {
                         className="pixel-border-amber inline-flex items-center gap-2 rounded px-6 py-3 text-xs text-amber-400 transition-all hover:bg-amber-400/10"
                         style={{ fontFamily: 'var(--font-heading)', lineHeight: '1.5' }}
                     >
-                        🗡️ Start a Quest
+                        🗡️ Start a Project
                     </a>
                     <a
                         href="#projects"
