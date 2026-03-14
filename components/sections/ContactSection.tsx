@@ -29,7 +29,7 @@ export function ContactSection() {
                             className="mb-3 text-xs uppercase tracking-widest text-purple-400"
                             style={{ fontFamily: 'var(--font-body)' }}
                         >
-                            Get in Touch
+                            Start a Quest
                         </p>
                         <h2
                             className="mb-6 leading-loose text-slate-100"
