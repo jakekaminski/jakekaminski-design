@@ -2,7 +2,7 @@ export function DialogueSection() {
     return (
         <section
             aria-label="NPC Dialogue"
-            className="py-12"
+            className="pt-8 pb-12 lg:pt-10 lg:pb-20"
             style={{ backgroundColor: '#0a0a14' }}
         >
             <div className="mx-auto max-w-3xl px-6 lg:px-8">

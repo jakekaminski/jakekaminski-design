@@ -29,7 +29,7 @@ export function HomeHero() {
                 style={{ background: 'radial-gradient(ellipse, rgba(245,158,11,0.12) 0%, transparent 70%)' }}
             />
 
-            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center px-6 py-32 text-center lg:px-8 lg:py-48">
+            <div className="mx-auto flex max-w-7xl flex-col items-center justify-center px-6 pt-28 pb-12 text-center lg:px-8 lg:pt-40 lg:pb-16">
                 {/* Badge */}
                 <div
                     className="mb-8 inline-flex items-center gap-2 rounded border border-purple-700/40 px-4 py-2 text-purple-300"
@@ -48,7 +48,7 @@ export function HomeHero() {
                     className="mb-8 max-w-3xl text-balance leading-loose text-amber-400"
                     style={{
                         fontFamily: 'var(--font-heading)',
-                        fontSize: 'clamp(1rem, 3.5vw, 1.75rem)',
+                        fontSize: 'clamp(1rem, 3.5vw, 2.75rem)',
                     }}
                 >
                     I forge web apps from raw code and battle-tested frameworks.
@@ -75,7 +75,7 @@ export function HomeHero() {
                     </a>
                     <a
                         href="#projects"
-                        className="inline-flex items-center gap-2 rounded border border-slate-700 px-6 py-3 text-xs text-slate-300 transition-all hover:border-slate-500 hover:text-slate-100"
+                        className="pixel-border inline-flex items-center gap-2 rounded px-6 py-3 text-xs text-slate-300 hover:text-slate-100"
                         style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem' }}
                     >
                         📜 View Quest Log

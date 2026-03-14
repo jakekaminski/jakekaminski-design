@@ -31,18 +31,46 @@
     box-shadow:
         0 0 0 2px var(--color-border),
         4px 4px 0 0 var(--color-border);
+    transition: box-shadow 0.06s ease, transform 0.06s ease;
 }
 
 .pixel-border-amber {
     box-shadow:
         0 0 0 2px var(--color-amber-glow),
         4px 4px 0 0 var(--color-amber-dim);
+    transition: box-shadow 0.06s ease, transform 0.06s ease;
 }
 
 .pixel-border-purple {
     box-shadow:
         0 0 0 2px var(--color-purple-mid),
         4px 4px 0 0 var(--color-purple-deep);
+    transition: box-shadow 0.06s ease, transform 0.06s ease;
+}
+
+/* Pressed state — button sinks into the shadow */
+.pixel-border:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 2px var(--color-border);
+}
+
+.pixel-border-amber:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 2px var(--color-amber-glow);
+}
+
+.pixel-border-purple:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 2px var(--color-purple-mid);
+}
+
+/* Prevent iOS auto-zoom when focusing form inputs (font-size must be ≥ 16px) */
+@media screen and (max-width: 767px) {
+    input,
+    textarea,
+    select {
+        font-size: 16px !important;
+    }
 }
 
 /* Scanline overlay for retro vibe */
