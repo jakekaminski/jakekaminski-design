@@ -38,7 +38,7 @@ export function ContactSection() {
                                 fontSize: 'clamp(0.85rem, 2vw, 1.2rem)',
                             }}
                         >
-                            Got a Project?
+                            Send a Raven
                         </h2>
                         <p
                             className="mb-10 leading-relaxed text-slate-400"
