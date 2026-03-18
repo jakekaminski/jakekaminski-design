@@ -8,6 +8,17 @@ export const metadata = {
     description:
         "Full-stack web developer from the Midwest. I craft web experiences with Next.js, React, and TypeScript — one quest at a time.",
     image: '/images/headshot.jpg',
+    icons: {
+        icon: [
+            { url: '/favicon.ico' },
+            { url: '/favicon.svg', type: 'image/svg+xml' },
+            { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+        ],
+        apple: [
+            { url: '/apple-touch-icon.png' },
+        ],
+    },
+    manifest: '/site.webmanifest',
 }
 
 export const pressStart2P = Press_Start_2P({
