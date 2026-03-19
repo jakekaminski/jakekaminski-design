@@ -45,7 +45,7 @@ export function HomeHero() {
 
                 {/* Headline */}
                 <h1
-                    className="mb-8 max-w-3xl text-balance leading-1 text-amber-400"
+                    className="mb-8 max-w-3xl text-balance leading-[1.15] text-amber-400"
                     style={{
                         fontFamily: 'var(--font-heading)',
                         fontSize: 'clamp(1rem, 3.5vw, 2.75rem)',
